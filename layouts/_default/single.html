@@ -4,9 +4,9 @@
         <div class="row">
             <div class="col">
                 <div class="tags">
-                    {{ range .Params.tags }}
-                        <a class="badge badge-pill badge-dark" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
-                    {{ end }}
+                    {{ range .Params.tags -}}
+                        <a class="badge badge-pill badge-light mr-2" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                    {{- end }}
                 </div>
                 <h1 class="display-1">{{ .Title }}</h1>
                 <h3>Posted on <time>{{ .Date.Format "Monday, January 2, 2006" }}</time></h3>
