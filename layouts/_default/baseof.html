@@ -14,15 +14,15 @@
 <body>
     {{ partial "header" . }}
     {{ block "header" . }}
-        <header class="header" style="">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <h1 class="display-1 text-center">{{ .Site.Title }}</h1>
-                    </div>
+    <header class="header text-white" style="">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="display-1 text-center">{{ .Site.Title }}</h1>
                 </div>
             </div>
-        </header>
+        </div>
+    </header>
     {{ end }}
     {{ block "main" . }}{{ end }}
     {{ partial "footer" . }}

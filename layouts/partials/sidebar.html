@@ -2,7 +2,7 @@
     <section class="tags">
         <h5>Tags</h5>
         {{ range $name, $value := .Site.Taxonomies.tags }}
-            <a class="badge badge-pill badge-dark" href="{{ "/tags/" | relLangURL}}{{ $name | urlize }}">{{ $name }}</a>
+            <a class="badge badge-pill badge-dark" href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a>
         {{ end }}
     </section>
 </aside>

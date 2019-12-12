@@ -2,6 +2,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
+    devtool: 'source-map',
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'static'),
@@ -13,10 +14,16 @@ module.exports = {
             use: [
                 MiniCssExtractPlugin.loader,
                 {
-                    loader: 'css-loader'
+                    loader: 'css-loader',
+                    options: {
+                        sourceMap: true,
+                    }
                 },
                 {
-                    loader: 'postcss-loader'
+                    loader: 'postcss-loader',
+                    options: {
+                        sourceMap: true,
+                    }
                 },
                 {
                     loader: 'sass-loader',
@@ -29,7 +36,8 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'css/style.css'
+            filename: 'css/style.css',
+            sourceMap: true
         }),
     ]
 };
