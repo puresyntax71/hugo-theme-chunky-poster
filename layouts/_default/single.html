@@ -1,0 +1,27 @@
+{{ define "header" }}
+<header class="header" style="">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="tags">
+                    {{ range .Params.tags }}
+                        <a class="badge badge-pill badge-dark" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                    {{ end }}
+                </div>
+                <h1 class="display-1">{{ .Title }}</h1>
+                <h3>Posted on <time>{{ .Date.Format "Monday, January 2, 2006" }}</time></h3>
+            </div>
+        </div>
+    </div>
+</header>
+{{ end }}
+
+{{ define "main" }}
+<article class="container my-4">
+    <div class="row">
+        <div class="col">
+            {{ .Content }}
+        </div>
+    </div>
+</article>
+{{ end }}

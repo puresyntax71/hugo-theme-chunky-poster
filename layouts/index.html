@@ -1,0 +1,16 @@
+{{ define "main" }}
+<main class="container my-4">
+    <div class="row">
+        <div class="col-md-8">
+            {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+            {{ range $paginator.Pages }}
+                {{ .Render "summary" }}
+            {{ end }}
+            {{ partial "pagination.html" . }}
+        </div>
+        <div class="col-md-4">
+            {{ partial "sidebar.html" . }}
+        </div>
+    </div>
+</main>
+{{ end }}

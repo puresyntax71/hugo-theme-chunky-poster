@@ -1,0 +1,20 @@
+{
+  "name": "chunky-poster",
+  "version": "1.0.0",
+  "main": "webpack.config.js",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "css-loader": "^3.3.0",
+    "jquery": "^3.4.1",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.13.0",
+    "popper.js": "^1.16.0",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}

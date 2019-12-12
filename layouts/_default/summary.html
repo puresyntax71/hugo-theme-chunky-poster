@@ -1,0 +1,9 @@
+<article class="border-bottom border-dark mb-4">
+    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+    <div class="meta">
+        <p>Posted on <time>{{ .Date.Format "Monday, January 2, 2006" }}</time></p>
+    </div>
+    <div class="summary mb-4">
+        {{ .Summary }}
+    </div>
+</article>
