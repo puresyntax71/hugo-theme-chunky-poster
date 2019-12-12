@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <div class="tags">
+                <div class="tags text-lowercase">
                     {{ range .Params.tags -}}
                         <a class="badge badge-pill badge-light mr-2" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
                     {{- end }}
