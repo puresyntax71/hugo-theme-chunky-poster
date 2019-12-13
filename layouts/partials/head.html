@@ -1,0 +1,13 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>{{ .Site.Title }}</title>
+{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+
+{{ with index .Site.Data "chunky-poster" }}
+<link rel="stylesheet" href="{{ print "dist/" .assets.main.css | relURL }}">
+{{ end }}
+
+{{ with .OutputFormats.Get "RSS" -}}
+{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
+{{- end }}

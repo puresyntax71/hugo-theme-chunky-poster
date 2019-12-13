@@ -1,21 +1,22 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const AssetsPlugin = require('assets-webpack-plugin');
 
 module.exports = {
+    mode: 'production',
     devtool: 'source-map',
-    entry: './src/main.js',
+    entry: path.resolve(__dirname, 'src/main.js'),
     output: {
-        path: path.resolve(__dirname, 'static'),
-        filename: 'js/app.js'
+        path: path.resolve(__dirname, 'static/dist'),
+        filename: 'chunky-poster.[contenthash].min.js',
+        chunkFilename: 'chunky-poster.[contenthash].min.js',
     },
     module: {
         rules: [
             {
                 test: /\.m?js$/,
                 exclude: /node_modules/,
-                use: {
-                    loader: 'babel-loader',
-                }
+                loader: 'babel-loader'
             },
             {
                 test: /\.scss$/,
@@ -23,30 +24,29 @@ module.exports = {
                     MiniCssExtractPlugin.loader,
                     {
                         loader: 'css-loader',
-                        options: {
-                            sourceMap: true,
-                        }
+                        options: { sourceMap: true },
                     },
                     {
                         loader: 'postcss-loader',
-                        options: {
-                            sourceMap: true,
-                        }
+                        options: { sourceMap: true },
                     },
                     {
                         loader: 'sass-loader',
-                        options: {
-                            sourceMap: true,
-                        }
-                    }
+                        options: { sourceMap: true },
+                    },
                 ]
             }
         ]
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'css/style.css',
-            sourceMap: true
+            filename: 'chunky-poster.[contenthash].min.css',
+            sourceMap: true,
         }),
-    ]
+        new AssetsPlugin({
+            filename: 'assets.json',
+            path: path.resolve(__dirname, 'data/chunky-poster'),
+            prettyPrint: true,
+        }),
+    ],
 };
