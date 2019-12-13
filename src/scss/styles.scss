@@ -11,3 +11,7 @@ header.header {
     padding-bottom: $spacer * 10;
     background: center/cover no-repeat $gray-800;
 }
+
+aside section {
+    margin-bottom: $spacer;
+}

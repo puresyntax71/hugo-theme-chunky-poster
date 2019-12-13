@@ -14,7 +14,7 @@
 <body>
     {{ partial "header.html" . }}
     {{ block "header" . }}
-    <header class="header text-white" style="background-image: url('https://via.placeholder.com/1920x1200.png')">
+    <header class="header text-white" style="background-image: url('{{ .Site.Params.headerURL | safeURL }}')">
         <div class="container">
             <div class="row">
                 <div class="col">

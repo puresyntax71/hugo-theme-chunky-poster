@@ -21,6 +21,8 @@ tag = "tags"
 series = "series"
 
 [params]
+  headerURL = 'https://via.placeholder.com/1920x1200.png'
+
   [params.social]
     rss = true
     email = "example@example.com"
@@ -37,30 +39,14 @@ series = "series"
     gitlab = "http://localhost:1313"
     mastodon = "http://localhost:1313"
     keybase = "http://localhost:1313"
-
-[privacy]
-  [privacy.vimeo]
-    disabled = false
-    simple = true
-
-  [privacy.twitter]
-    disabled = false
-    enableDNT = true
-    simple = true
-
-  [privacy.instagram]
-    disabled = false
-    simple = true
-
-  [privacy.youtube]
-    disabled = false
-    privacyEnhanced = true
+  [params.about]
+    enable = true
+    avatarURL = 'https://via.placeholder.com/240x240.png'
+    description = 'Lorem ipsum dolor sit amet.'
 
 [services]
-
   [services.instagram]
     disableInlineCSS = true
-
   [services.twitter]
     disableInlineCSS = true
 

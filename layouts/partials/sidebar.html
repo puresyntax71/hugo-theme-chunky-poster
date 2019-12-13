@@ -1,10 +1,24 @@
 <aside>
     <section class="tags">
         <h5>Tags</h5>
-        <div class="tags text-lowercase">
+        <p class="text-lowercase">
         {{ range $name, $value := .Site.Taxonomies.tags }}
             <a class="badge badge-pill badge-dark" href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a>
         {{ end }}
-        </div>
+        </p>
     </section>
+    {{- if .Site.Params.about.enable }}
+    <section class="about">
+        <h5>About me</h5>
+        {{- with .Site.Params.about.avatarURL }}
+        <p class="image text-center">
+            <img src="{{ . | safeURL }}" class="img-thumbnail">
+        </p>
+        {{- end }}
+
+        {{- with .Site.Params.about.description }}
+        <p>{{ . | safeHTML }}</p>
+        {{- end }}
+    </section>
+    {{- end }}
 </aside>
