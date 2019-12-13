@@ -17,11 +17,18 @@
 {{ end }}
 
 {{ define "main" }}
-<article class="container my-4">
+<main class="container my-4">
     <div class="row">
-        <div class="col">
-            {{ .Content }}
+        <div class="col-md-8">
+            <article class="row">
+                <div class="col">
+                    {{ .Content }}
+                </div>
+            </article>
+        </div>
+        <div class="col-md-4">
+            {{ partial "sidebar.html" . }}
         </div>
     </div>
-</article>
+</main>
 {{ end }}

@@ -37,7 +37,11 @@
             </ul>
 
             <p class="text-muted">
-                Copyright &copy; {{ .Site.Title }} {{ now.Year }}
+                {{ if .Site.Copyright }}
+                    {{ .Site.Copyright | safeHTML }}
+                {{ else }}
+                    Copyright &copy; {{ .Site.Title }} {{ now.Year }}
+                {{ end }}
             </p>
         </div>
     </div>

@@ -10,10 +10,15 @@ footnoteReturnLinkContents = "^"
 
 [menu]
   [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 10
+  [[menu.main]]
     identifier = "about"
     name = "About"
     url = "/about/"
-    weight = 10
+    weight = 0
 
 [taxonomies]
 category = "categories"
@@ -39,6 +44,7 @@ series = "series"
     gitlab = "http://localhost:1313"
     mastodon = "http://localhost:1313"
     keybase = "http://localhost:1313"
+
   [params.about]
     enable = true
     avatarURL = "https://via.placeholder.com/240x240.png"
@@ -47,6 +53,7 @@ series = "series"
 [services]
   [services.instagram]
     disableInlineCSS = true
+
   [services.twitter]
     disableInlineCSS = true
 
