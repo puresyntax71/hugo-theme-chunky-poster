@@ -18,6 +18,9 @@
     {{ end }}
     {{ block "main" . }}{{ end }}
     {{ partial "footer.html" . }}
-    <script src="{{ "js/app.js" | relURL }}"></script>
+
+    {{ with index .Site.Data "chunky-poster" }}
+    <script src="{{ print "dist/" .assets.main.js | relURL }}"></script>
+    {{ end }}
 </body>
 </html>
