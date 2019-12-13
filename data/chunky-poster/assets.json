@@ -1,6 +1,16 @@
 {
   "main": {
-    "css": "chunky-poster.7a8d533624c5c02ac7ee.min.css",
-    "js": "chunky-poster.259e9e863271f5d656db.min.js"
+    "css": "main.7a8d533624c5c02ac7ee.min.css",
+    "js": "main.f1c46ae273b550913ccb.min.js"
+  },
+  "vendors~main": {
+    "css": "vendors~main.dae65665531146e27d1e.min.css",
+    "js": "vendors~main.b6f951f9bb2c159504bb.min.js"
+  },
+  "vendors~bootstrap": {
+    "js": "vendors~bootstrap.5c5f9c23b2423923570b.min.js"
+  },
+  "vendors~highlight.js": {
+    "js": "vendors~highlight.js.b021f600539c02343549.min.js"
   }
 }

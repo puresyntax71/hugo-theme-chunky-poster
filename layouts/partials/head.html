@@ -5,7 +5,11 @@
 {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
 
 {{ with index .Site.Data "chunky-poster" }}
-<link rel="stylesheet" href="{{ print "dist/" .assets.main.css | relURL }}">
+    {{ range $vendor := .assets }}
+        {{ if $vendor.css }}
+        <link rel="stylesheet" href="{{ print "dist/" $vendor.css | relURL }}">
+        {{ end }}
+    {{ end }}
 {{ end }}
 
 {{ with .OutputFormats.Get "RSS" -}}

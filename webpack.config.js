@@ -8,8 +8,8 @@ module.exports = {
     entry: path.resolve(__dirname, 'src/main.js'),
     output: {
         path: path.resolve(__dirname, 'static/dist'),
-        filename: 'chunky-poster.[contenthash].min.js',
-        chunkFilename: 'chunky-poster.[contenthash].min.js',
+        filename: '[name].[contenthash].min.js',
+        chunkFilename: '[name].[contenthash].min.js',
     },
     module: {
         rules: [
@@ -19,8 +19,9 @@ module.exports = {
                 loader: 'babel-loader'
             },
             {
-                test: /\.scss$/,
+                test: /\.(sa|sc|c)ss$/,
                 use: [
+                    'style-loader',
                     MiniCssExtractPlugin.loader,
                     {
                         loader: 'css-loader',
@@ -40,7 +41,7 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'chunky-poster.[contenthash].min.css',
+            filename: '[name].[contenthash].min.css',
             sourceMap: true,
         }),
         new AssetsPlugin({

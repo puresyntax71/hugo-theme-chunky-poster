@@ -20,7 +20,13 @@
     {{ partial "footer.html" . }}
 
     {{ with index .Site.Data "chunky-poster" }}
-    <script src="{{ print "dist/" .assets.main.js | relURL }}"></script>
+        {{ range $vendor := .assets }}
+            {{ if $vendor.js }}
+            <script src="{{ print "dist/" $vendor.js | relURL }}"></script>
+            {{ end }}
+        {{ end }}
     {{ end }}
+
+    {{ template "_internal/google_analytics.html" . }}
 </body>
 </html>

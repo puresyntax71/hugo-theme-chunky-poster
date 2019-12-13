@@ -1,5 +1,5 @@
 <aside>
-    <section class="tags">
+    <section class="tags mb-5">
         <h5>Tags</h5>
         <p class="text-lowercase">
         {{ range $name, $value := .Site.Taxonomies.tags }}
@@ -8,11 +8,11 @@
         </p>
     </section>
     {{- if .Site.Params.about.enable }}
-    <section class="about">
+    <section class="about mb-5">
         <h5>About me</h5>
         {{- with .Site.Params.about.avatarURL }}
-        <p class="image text-center">
-            <img src="{{ . | safeURL }}" class="img-thumbnail">
+        <p class="image text-center my-5">
+            <img src="{{ . | safeURL }}" class="img-thumbnail rounded-circle">
         </p>
         {{- end }}
 

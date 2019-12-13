@@ -1,12 +1,14 @@
 baseURL = "https://gohugo.io/"
 title = "Hugo Themes"
 author = "Steve Francia"
+description = ""
 copyright = "Copyright © 2008–2019, Steve Francia and the Hugo Authors; all rights reserved."
 paginate = 3
 languageCode = "en"
 DefaultContentLanguage = "en"
 enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
+googleAnalytics = ""
 
 [menu]
   [[menu.main]]
@@ -47,8 +49,15 @@ series = "series"
 
   [params.about]
     enable = true
-    avatarURL = "https://via.placeholder.com/240x240.png"
+    avatarURL = "https://source.unsplash.com/UWj9zaDnYiE/240x240"
     description = "Lorem ipsum dolor sit amet."
+
+  [params.highlightJS]
+    enable = true
+    languages = [
+      'javascript',
+      'xml',
+    ]
 
 [services]
   [services.instagram]
