@@ -6,3 +6,7 @@ yarn-error.log*
 node_modules/
 .npm
 .yarn-integrity
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map

@@ -1,6 +1,6 @@
-@import "~bootswatch/dist/cerulean/variables";
+$enable-responsive-font-sizes: true;
+
 @import "~bootstrap/scss/bootstrap";
-@import "~bootswatch/dist/cerulean/bootswatch";
 
 #navbar-main-menu {
     background-color: rgba($light, 0.9);
