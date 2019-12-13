@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col">
             <ul class="list-inline">
-                {{- if .Site.Params.social.rss }}
+                {{ if .Site.Params.social.rss -}}
                 <li class="list-inline-item">
                     <a href="{{- with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{- end }}" rel="alternate" type="application/rss+xml" class="d-block">
                         <span class="fa-stack fa-lg">
@@ -11,8 +11,8 @@
                         </span>
                     </a>
                 </li>
-                {{- end }}
-                {{- if .Site.Params.social.email }}
+                {{- end -}}
+                {{- if .Site.Params.social.email -}}
                 <li class="list-inline-item">
                     <a href="mailto://{{ .Site.Params.social.email }}" class="d-block">
                         <span class="fa-stack fa-lg">
@@ -21,9 +21,9 @@
                         </span>
                     </a>
                 </li>
-                {{- end }}
-                {{- range $name, $path := .Site.Params.social }}
-                    {{- if and $path (not (in (slice "rss" "email") $name)) }}
+                {{- end -}}
+                {{- range $name, $path := .Site.Params.social -}}
+                    {{- if and $path (not (in (slice "rss" "email") $name)) -}}
                     <li class="list-inline-item">
                         <a href="{{ $path | safeURL }}" class="d-block">
                             <span class="fa-stack fa-lg">
@@ -32,9 +32,7 @@
                             </span>
                         </a>
                     </li>
-                    {{- end }}
-                {{- end }}
-                {{ with .OutputFormats.Get "RSS" -}}
+                    {{- end -}}
                 {{- end }}
             </ul>
 

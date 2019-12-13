@@ -21,7 +21,7 @@ tag = "tags"
 series = "series"
 
 [params]
-  headerURL = 'https://via.placeholder.com/1920x1200.png'
+  headerURL = "https://via.placeholder.com/1920x1200.png"
 
   [params.social]
     rss = true
@@ -41,8 +41,8 @@ series = "series"
     keybase = "http://localhost:1313"
   [params.about]
     enable = true
-    avatarURL = 'https://via.placeholder.com/240x240.png'
-    description = 'Lorem ipsum dolor sit amet.'
+    avatarURL = "https://via.placeholder.com/240x240.png"
+    description = "Lorem ipsum dolor sit amet."
 
 [services]
   [services.instagram]
