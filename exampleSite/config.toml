@@ -9,7 +9,6 @@ enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
 
 [menu]
-
   [[menu.main]]
     identifier = "about"
     name = "About"
@@ -21,8 +20,26 @@ category = "categories"
 tag = "tags"
 series = "series"
 
-[privacy]
+[params]
+  [params.social]
+    rss = true
+    email = "example@example.com"
+    facebook = "http://localhost:1313"
+    googleplus = "http://localhost:1313"
+    twitter = "http://localhost:1313"
+    linkedin = "http://localhost:1313"
+    stack-overflow = "http://localhost:1313"
+    instagram = "http://localhost:1313"
+    github = "http://localhost:1313"
+    weibo = "http://localhost:1313"
+    medium = "http://localhost:1313"
+    pinterest = "http://localhost:1313"
+    reddit = "http://localhost:1313"
+    gitlab = "http://localhost:1313"
+    mastodon = "http://localhost:1313"
+    keybase = "http://localhost:1313"
 
+[privacy]
   [privacy.vimeo]
     disabled = false
     simple = true

@@ -6,8 +6,10 @@
   "dependencies": {
     "@babel/core": "^7.7.5",
     "@babel/preset-env": "^7.7.6",
+    "@fortawesome/fontawesome-free": "^5.12.0",
     "babel-loader": "^8.0.6",
     "bootstrap": "^4.4.1",
+    "bootswatch": "^4.4.1",
     "css-loader": "^3.3.0",
     "jquery": "^3.4.1",
     "mini-css-extract-plugin": "^0.8.0",
