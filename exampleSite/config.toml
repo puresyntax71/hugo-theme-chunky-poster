@@ -25,7 +25,6 @@ series = "series"
     rss = true
     email = "example@example.com"
     facebook = "http://localhost:1313"
-    googleplus = "http://localhost:1313"
     twitter = "http://localhost:1313"
     linkedin = "http://localhost:1313"
     stack-overflow = "http://localhost:1313"
