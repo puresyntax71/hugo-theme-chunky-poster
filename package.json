@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "@babel/core": "^7.7.5",
-    "@babel/plugin-transform-runtime": "^7.7.6",
     "@babel/preset-env": "^7.7.6",
     "@babel/runtime": "^7.7.6",
     "@fortawesome/fontawesome-free": "^5.12.0",
@@ -32,5 +31,8 @@
     "style-loader": "^1.0.1",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.7.6"
   }
 }

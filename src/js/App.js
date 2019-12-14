@@ -21,6 +21,7 @@ import {
 library.add(
     faCircle,
     faRss,
+    faEnvelope,
     faFacebook,
     faTwitter,
     faLinkedin,
