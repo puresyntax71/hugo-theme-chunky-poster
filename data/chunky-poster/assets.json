@@ -1,16 +1,15 @@
 {
-  "main": {
-    "css": "main.7a8d533624c5c02ac7ee.min.css",
-    "js": "main.f1c46ae273b550913ccb.min.js"
+  "app": {
+    "js": "/dist/app.2b1ab2933bb80a073d9c.min.js"
   },
-  "vendors~main": {
-    "css": "vendors~main.dae65665531146e27d1e.min.css",
-    "js": "vendors~main.b6f951f9bb2c159504bb.min.js"
+  "main": {
+    "css": "/dist/main.7a8d533624c5c02ac7ee.min.css",
+    "js": "/dist/main.ba3183620e850394d868.min.js"
+  },
+  "vendors~app": {
+    "js": "/dist/vendors~app.904c0a2df26ba91b0bfe.min.js"
   },
   "vendors~bootstrap": {
-    "js": "vendors~bootstrap.5c5f9c23b2423923570b.min.js"
-  },
-  "vendors~highlight.js": {
-    "js": "vendors~highlight.js.b021f600539c02343549.min.js"
+    "js": "/dist/vendors~bootstrap.bf81e399b6181673b70d.min.js"
   }
 }

@@ -52,12 +52,13 @@ series = "series"
     avatarURL = "https://source.unsplash.com/UWj9zaDnYiE/240x240"
     description = "Lorem ipsum dolor sit amet."
 
-  [params.highlightJS]
+  [params.prismJS]
     enable = true
-    languages = [
-      'javascript',
-      'xml',
-    ]
+    theme = ""
+
+[markup]
+  [markup.highlight]
+    codeFences = false
 
 [services]
   [services.instagram]

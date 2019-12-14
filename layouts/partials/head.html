@@ -7,8 +7,17 @@
 {{ with index .Site.Data "chunky-poster" }}
     {{ range $vendor := .assets }}
         {{ if $vendor.css }}
-        <link rel="stylesheet" href="{{ print "dist/" $vendor.css | relURL }}">
+        <link rel="stylesheet" href="{{ $vendor.css | relURL }}">
         {{ end }}
+    {{ end }}
+{{ end }}
+
+{{ if .Site.Params.prismJS.enable }}
+    {{ if .Site.Params.prismJS.theme }}
+    <link rel="stylesheet"
+          href="//cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism-{{ .Site.Params.prismJS.theme }}.min.css">
+    {{ else }}
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism.min.css">
     {{ end }}
 {{ end }}
 

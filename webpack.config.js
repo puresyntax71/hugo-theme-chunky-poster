@@ -1,6 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const AssetsPlugin = require('assets-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
     mode: 'production',
@@ -10,6 +11,7 @@ module.exports = {
         path: path.resolve(__dirname, 'static/dist'),
         filename: '[name].[contenthash].min.js',
         chunkFilename: '[name].[contenthash].min.js',
+        publicPath: "/dist/",
     },
     module: {
         rules: [
@@ -40,6 +42,12 @@ module.exports = {
         ]
     },
     plugins: [
+        new CleanWebpackPlugin({
+            cleanAfterEveryBuildPatterns: [
+                'static/dist/*',
+                'data/chunky-poster/assets.json',
+            ],
+        }),
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash].min.css',
             sourceMap: true,
