@@ -16,21 +16,11 @@
         </div>
     </header>
     {{ end }}
+
     {{ block "main" . }}{{ end }}
+
     {{ partial "footer.html" . }}
-
-    {{ with index .Site.Data "chunky-poster" }}
-        {{ range $vendor := .assets }}
-            {{ if $vendor.js }}
-            <script src="{{ $vendor.js | relURL }}"></script>
-            {{ end }}
-        {{ end }}
-    {{ end }}
-
-    {{ if .Site.Params.prismJS.enable }}
-    <script src="//cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-core.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/autoloader/prism-autoloader.min.js"></script>
-    {{ end }}
+    {{ partial "foot.html" . }}
 
     {{ template "_internal/google_analytics.html" . }}
 </body>
