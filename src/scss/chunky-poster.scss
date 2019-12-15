@@ -1,0 +1,17 @@
+#navbar-main-menu {
+    background-color: rgba($light, 0.9);
+}
+
+header.header {
+    padding-top: $spacer * 10;
+    padding-bottom: $spacer * 10;
+    background: center/cover no-repeat $gray-800;
+}
+
+aside section {
+    margin-bottom: $spacer;
+}
+
+code[class*=language-], pre[class*=language-] {
+    font-family: $font-family-monospace;
+}

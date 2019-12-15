@@ -1,6 +1,12 @@
 # Chunky Poster
 
-A bootstrap based theme.
+A bootstrap 4 based theme.
+
+# Features
+
+# Configuration
+
+# Customization
 
 # Credits
 

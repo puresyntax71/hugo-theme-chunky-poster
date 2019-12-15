@@ -1,10 +1,20 @@
-<article>
+<article class="summary">
     <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
-    <div class="meta text-secondary">
-        {{ with .Date.Format "Monday, January 2, 2006" }}
-        <p>{{ T "posted" . | safeHTML }}</p>
-        {{ end }}
-    </div>
+    <ul class="list-inline meta">
+        <li class="list-inline-item">
+            <i class="fas fa-calendar mr-2"></i>{{ .Date.Format "Monday, January 2, 2006" }}
+        </li>
+        <li class="list-inline-item">
+            <i class="fas fa-user mr-2"></i>{{ .Params.author }}
+        </li>
+        <li class="list-inline-item">
+            <i class="fas fa-folder mr-2"></i>
+            {{- range $index, $category := .Params.categories -}}
+                {{- if $index -}}, {{ end -}}
+                <a href="{{ "/categories/" | relLangURL }}{{ $category | urlize }}">{{ $category }}</a>
+            {{- end -}}
+        </li>
+    </ul>
     <div class="summary mb-4">
         {{ .Summary }}
     </div>

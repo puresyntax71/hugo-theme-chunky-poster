@@ -11,9 +11,23 @@
                     {{- end }}
                 </div>
                 <h1 class="display-1">{{ .Title }}</h1>
-                {{ with .Date.Format "Monday, January 2, 2006" }}
-                <h3 class="text-light">{{ T "posted" . | safeHTML }}</h3>
-                {{ end }}
+                <ul class="list-inline meta">
+                    <li class="list-inline-item">
+                        <i class="fas fa-calendar mr-2"></i>{{ .Date.Format "Monday, January 2, 2006" }}
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="fas fa-user mr-2"></i>{{ .Params.author }}
+                    </li>
+                    {{- if .Params.categories -}}
+                    <li class="list-inline-item">
+                        <i class="fas fa-folder mr-2"></i>
+                        {{- range $index, $category := .Params.categories -}}
+                            {{- if $index -}}, {{ end -}}
+                            <a href="{{ "/categories/" | relLangURL }}{{ $category | urlize }}">{{ $category }}</a>
+                        {{- end -}}
+                    </li>
+                    {{- end -}}
+                </ul>
             </div>
         </div>
     </div>
@@ -21,7 +35,7 @@
 {{ end }}
 
 {{ define "main" }}
-<main class="container my-4">
+<main class="content container my-4">
     <div class="row">
         <div class="col-md-8">
             <article class="row">

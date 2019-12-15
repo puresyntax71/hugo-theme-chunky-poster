@@ -30,6 +30,7 @@ series = "series"
   author = "Steve Francia"
   description = "Lorem ipsum dolor sit amet."
   headerURL = "https://source.unsplash.com/8weijaL92T8/1920x1200"
+  subtitle = "A simple, bootstrap blog theme."
 
   [params.social]
     rss = true
