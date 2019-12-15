@@ -1,15 +1,28 @@
-{{ if gt .Paginator.TotalPages 1 }}
-<nav>
-    <ul class="pagination d-block overflow-hidden">
-        {{ if .Paginator.HasPrev }}
-            <li class="page-item float-left">
-                <a class="page-link" href="{{ .Paginator.Prev.URL }}">Previous Page</a>
-            </li>
-        {{ end }}
-        {{ if .Paginator.HasNext }}
-            <li class="page-item float-right">
-                <a class="page-link" href="{{ .Paginator.Next.URL }}">Next Page</a>
-            </li>
-        {{ end }}
-    </ul>
+{{ $pager := $.Paginator }}
+{{ if gt $pager.TotalPages 1 }}
+<nav class="paginator">
+  <ul class="pagination justify-content-center">
+    {{ if $pager.HasPrev }}
+        <li class="page-item">
+            <a class="page-link" href="{{ $pager.Prev.URL }}">
+                <i class="fas fa-chevron-left mr-2"></i>Previous
+            </a>
+        </li>
+    {{ end }}
+    {{ range $pager.Pagers }}
+    <li class="page-item">
+        <a href="{{ .URL }}" class="page-link{{ if eq . $pager }} active{{ end }}">
+            {{ .PageNumber }}
+        </a>
+    </li>
+    {{ end }}
+    {{ if $pager.HasNext }}
+        <li class="page-item">
+            <a class="page-link" href="{{ $pager.Next.URL }}">
+                Next<i class="fas fa-chevron-right ml-2"></i>
+            </a>
+        </li>
+    {{ end }}
+  </ul>
+</nav>
 {{ end }}

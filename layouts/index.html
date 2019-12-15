@@ -1,19 +1,16 @@
 {{ define "main" }}
 <main class="container my-4">
     <div class="row">
-        <div class="col">
-            <div class="row">
+        <div class="col-md-8">
             {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
-            {{ $divide := div 12 .Site.Params.divider }}
             {{ range $index, $page := $paginator.Pages }}
-                <div class="col-sm-{{ $divide }} mb-4">
-                    {{ .Render "summary" }}
-                </div>
-
-                {{ if eq (mod (add $index 1) .Site.Params.divider) 0 }}<div class="w-100"></div>{{ end }}
+                {{ .Render "summary" }}
             {{ end }}
+
             {{ partial "pagination.html" . }}
-            </div>
+        </div>
+        <div class="col-md-4">
+            {{ partial "sidebar.html" . }}
         </div>
     </div>
 </main>

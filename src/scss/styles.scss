@@ -1,4 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700,700i|Roboto+Slab:400,700|Roboto:400,700&display=swap');
+
 $enable-responsive-font-sizes: true;
+
+$font-family-sans-serif: 'Roboto', sans-serif;
+$font-family-monospace: 'Roboto Mono', monospace;
+$font-family-serif: 'Roboto Slab', serif;
+
+$headings-font-family: $font-family-serif;
 
 @import "~bootstrap/scss/bootstrap";
 
@@ -14,4 +22,8 @@ header.header {
 
 aside section {
     margin-bottom: $spacer;
+}
+
+code[class*=language-], pre[class*=language-] {
+    font-family: $font-family-monospace;
 }

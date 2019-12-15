@@ -1,13 +1,13 @@
 {
   "app": {
-    "js": "/dist/app.130a9d391565aaf70018.min.js"
+    "js": "/dist/app.5848df5a4fa9a11cd413.min.js"
   },
   "main": {
-    "css": "/dist/main.7a8d533624c5c02ac7ee.min.css",
-    "js": "/dist/main.7793d24351128c3f8d7a.min.js"
+    "css": "/dist/main.320d7714c12ebb096182.min.css",
+    "js": "/dist/main.28e4d223d1504c7c0cee.min.js"
   },
   "vendors~app": {
-    "js": "/dist/vendors~app.249f6d7d4434baafc3a8.min.js"
+    "js": "/dist/vendors~app.4752db231b81b438781f.min.js"
   },
   "vendors~bootstrap": {
     "js": "/dist/vendors~bootstrap.bf81e399b6181673b70d.min.js"

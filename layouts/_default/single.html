@@ -5,7 +5,9 @@
             <div class="col">
                 <div class="tags text-lowercase">
                     {{ range .Params.tags -}}
-                        <a class="badge badge-pill badge-light border mr-2" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                    <a class="badge badge-pill badge-light border mr-2" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">
+                        <i class="fas fa-tag mr-2"></i>{{ . }}
+                    </a>
                     {{- end }}
                 </div>
                 <h1 class="display-1">{{ .Title }}</h1>

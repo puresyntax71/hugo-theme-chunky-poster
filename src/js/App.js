@@ -1,7 +1,14 @@
 'use strict';
 
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
-import { faCircle, faRss, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import {
+    faCircle,
+    faRss,
+    faEnvelope,
+    faChevronLeft,
+    faChevronRight,
+    faTag,
+} from '@fortawesome/free-solid-svg-icons';
 import {
     faFacebook,
     faTwitter,
@@ -35,6 +42,9 @@ library.add(
     faGitlab,
     faMastodon,
     faKeybase,
+    faChevronLeft,
+    faChevronRight,
+    faTag,
 );
 
 export default {
