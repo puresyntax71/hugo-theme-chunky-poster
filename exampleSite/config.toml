@@ -1,7 +1,5 @@
 baseURL = "https://gohugo.io/"
 title = "Hugo Themes"
-author = "Steve Francia"
-description = ""
 copyright = "Copyright © 2008–2019, Steve Francia and the Hugo Authors; all rights reserved."
 paginate = 2
 languageCode = "en"
@@ -9,6 +7,7 @@ DefaultContentLanguage = "en"
 enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
 googleAnalytics = ""
+enableMissingTranslationPlaceholders = true
 
 [menu]
   [[menu.main]]
@@ -28,6 +27,8 @@ tag = "tags"
 series = "series"
 
 [params]
+  author = "Steve Francia"
+  description = "Lorem ipsum dolor sit amet."
   headerURL = "https://source.unsplash.com/8weijaL92T8/1920x1200"
 
   [params.social]

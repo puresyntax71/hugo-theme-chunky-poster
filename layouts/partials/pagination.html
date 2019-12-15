@@ -5,7 +5,7 @@
     {{ if $pager.HasPrev }}
         <li class="page-item">
             <a class="page-link" href="{{ $pager.Prev.URL }}">
-                <i class="fas fa-chevron-left mr-2"></i>Previous
+                <i class="fas fa-chevron-left mr-2"></i>{{ T "previousPage" }}
             </a>
         </li>
     {{ end }}
@@ -19,7 +19,7 @@
     {{ if $pager.HasNext }}
         <li class="page-item">
             <a class="page-link" href="{{ $pager.Next.URL }}">
-                Next<i class="fas fa-chevron-right ml-2"></i>
+                {{ T "nextPage" }}<i class="fas fa-chevron-right ml-2"></i>
             </a>
         </li>
     {{ end }}

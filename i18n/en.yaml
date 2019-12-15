@@ -1,0 +1,17 @@
+# Single
+posted:
+    other: "Posted on <time>{{ .Count }}</time>"
+
+# Sidebar
+tags:
+    other: "Tags"
+
+about:
+    other: "About me"
+
+# Pagination
+previousPage:
+    other: "Previous"
+
+nextPage:
+    other: "Next"
