@@ -5,7 +5,7 @@
         <div class="col">
             <article>
                 <div class="row justify-content-center">
-                    <div class="col-md-8">
+                    <div class="col-lg-8">
                         <p class="created text-muted text-uppercase font-weight-bold">{{ $page.Date.Format "January 2, 2006" }}</p>
                         <div class="meta text-muted mb-3">
                             <span class="mr-2"><i class="fas fa-book-open mr-2"></i>{{ T "wordCount" $page.WordCount }}</span>
@@ -24,7 +24,7 @@
                         {{- with .Resources.GetMatch (strings.TrimPrefix "/images/" (index $images 0)) -}}
                             {{- $image := .Fill "900x500" -}}
                             <div class="row justify-content-center mb-3">
-                                <div class="col-md-10">
+                                <div class="col-lg-10">
                                     <img src="{{ $image.RelPermalink }}" class="img-fluid rounded" alt="{{ $page.Title }}">
                                 </div>
                             </div>
@@ -33,7 +33,7 @@
                 {{- end -}}
 
                 <div class="row justify-content-center">
-                    <div class="col-md-8">
+                    <div class="col-lg-8">
                         <div class="content">
                             {{ $page.Content }}
                         </div>

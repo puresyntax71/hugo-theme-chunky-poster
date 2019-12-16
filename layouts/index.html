@@ -2,7 +2,7 @@
 <main class="homepage container py-6">
     <!-- Hero -->
     <div class="hero row">
-        <div class="col position-relative py-md-7{{ if not .Site.Params.homepageImage }} py-7{{ else }} pb-5{{ end }}">
+        <div class="col position-relative py-lg-7{{ if not .Site.Params.homepageImage }} py-7{{ else }} pb-5{{ end }}">
             {{- with .Site.Params.homepageImage -}}
                 <div class="homepage-image">
                     <img src="{{ . | relURL }}" class="img-fluid">
@@ -19,8 +19,8 @@
     <!-- Latest article -->
     {{- range first 1 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) -}}
         {{ $page := . }}
-        <div class="latest row py-md-5">
-            <div class="col-md-6 mb-3">
+        <div class="latest row py-lg-5">
+            <div class="col-lg-6 mb-3">
                 {{- with $page.Params.images -}}
                     {{- $images := . -}}
                     {{- with $page.Site.GetPage "section" "images" -}}
@@ -33,7 +33,7 @@
                     {{- end -}}
                 {{- end -}}
             </div>
-            <div class="col-md-6 mb-3">
+            <div class="col-lg-6 mb-3">
                 <h5 class="created text-muted text-uppercase font-weight-bold">{{ $page.Date.Format "January 2, 2006" }}</h5>
                 <h2><a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a></h2>
 
@@ -45,7 +45,7 @@
     {{- end -}}
 
     <!-- Articles -->
-    <div class="articles row row-cols-1 row-cols-md-3">
+    <div class="articles row row-cols-1 row-cols-lg-3">
         {{ range after 1 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
             <div class="col mb-3">
                 {{ .Render "card" }}
