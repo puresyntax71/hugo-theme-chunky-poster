@@ -1,5 +1,4 @@
-+++
-title = "{{ replace .Name "-" " " | title }}"
-date = {{ .Date }}
-images = []
-+++
+---
+title: "{{ replace .Name "-" " " | title }}"
+date: {{ .Date }}
+---
