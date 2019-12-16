@@ -8,7 +8,9 @@
                         {{- if $term.Params.images -}}
                             {{- with .Resources.GetMatch (index $term.Params.images 0) -}}
                                 {{- $image := .Resize "64x" -}}
-                                <img src="{{ $image.RelPermalink }}" class="mr-3 rounded-circle" alt="{{ $term.Params.name }}">
+                                <a href="{{ $term.RelPermalink }}" class="mr-3">
+                                    <img src="{{ $image.RelPermalink }}" class="rounded-circle" alt="{{ $term.Params.name }}">
+                                </a>
                             {{- end -}}
                         {{- end -}}
                         <div class="media-body">
