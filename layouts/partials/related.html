@@ -2,7 +2,7 @@
 {{- with $related -}}
     <div class="related-content row mt-5 row-cols-1 row-cols-md-3">
         {{- range . -}}
-            <div class="col">
+            <div class="col mb-3">
                 {{ .Render "card" }}
             </div>
         {{- end -}}
