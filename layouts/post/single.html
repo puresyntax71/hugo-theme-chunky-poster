@@ -1,0 +1,58 @@
+{{ define "main" }}
+<main class="content-page container pt-7 pb-5">
+    {{ $page := . }}
+    <div class="row">
+        <div class="col">
+            <article>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <p class="created text-muted text-uppercase font-weight-bold">{{ $page.Date.Format "January 2, 2006" }}</p>
+                        <div class="meta text-muted mb-3">
+                            <span class="mr-2"><i class="fas fa-book-open mr-2"></i>{{ T "wordCount" $page.WordCount }}</span>
+                            <span><i class="fas fa-clock mr-2"></i>{{ T "readingTime" $page.ReadingTime }}</span>
+                        </div>
+
+                        <h1>{{ $page.Title }}</h1>
+
+                        {{ partial "authors.html" $page }}
+                    </div>
+                </div>
+
+                {{- with $page.Params.images -}}
+                    {{- $images := . -}}
+                    {{- with $page.Site.GetPage "section" "images" -}}
+                        {{- with .Resources.GetMatch (strings.TrimPrefix "/images/" (index $images 0)) -}}
+                            {{- $image := .Resize "900x" -}}
+                            <div class="row justify-content-center mb-3">
+                                <div class="col-md-10">
+                                    <img src="{{ $image.RelPermalink }}" class="img-fluid rounded" alt="{{ $page.Title }}">
+                                </div>
+                            </div>
+                        {{- end -}}
+                    {{- end -}}
+                {{- end -}}
+
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="content">
+                            {{ $page.Content }}
+                        </div>
+
+                        {{- with $page.Params.tags -}}
+                            <div class="tags my-3">
+                            {{- range . -}}
+                                <a class="badge badge-pill badge-light border mr-2" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">
+                                    <i class="fas fa-tag mr-2"></i>{{ . }}
+                                </a>
+                            {{- end -}}
+                            </p>
+                        {{- end -}}
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    {{ partial "related.html" $page }}
+</main>
+{{ end }}
