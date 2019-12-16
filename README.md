@@ -6,6 +6,10 @@ A bootstrap 4 based theme. The structure and design is based on the [Prisma blog
 
 ![Chunky poster](images/screenshot-responsive.png "Chunky poster")
 
+# Demo
+
+[Link](https://hugo-theme-chunky-poster.netlify.com)
+
 # Features
 
 * Multi-author
