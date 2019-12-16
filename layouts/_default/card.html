@@ -1,6 +1,6 @@
-<div class="card">
+<div class="card h-100">
     {{ $page := . }}
-    <a href="{{ $page.RelPermalink  }}" class="d-block">
+    <a href="{{ $page.RelPermalink }}" class="d-block">
         {{- with $page.Params.images -}}
             {{- $images := . -}}
             {{- with $page.Site.GetPage "section" "images" -}}
@@ -14,7 +14,7 @@
             <h4 class="card-title">{{ $page.Title }}</h4>
             <p class="card-text text-muted text-uppercase font-weight-bold">{{ $page.Date.Format "January 2, 2006" }}</p>
             <div class="card-text">
-                {{ $page.Summary }}
+                {{ $page.Summary | plainify }}
             </div>
         </div>
     </a>

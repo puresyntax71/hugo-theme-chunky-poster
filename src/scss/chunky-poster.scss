@@ -9,10 +9,10 @@ blockquote {
     padding-left: $spacer;
 }
 
-.related-content .card-deck .card {
-    @include media-breakpoint-up(md) {
-        flex: 33% 0 0;
-    }
+code {
+    background-color: $gray-100;
+    border-radius: $border-radius-sm;
+    padding: .2rem .4rem;
 }
 
 code[class*=language-], pre[class*=language-] {

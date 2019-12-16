@@ -28,10 +28,7 @@ series = "series"
 author = "authors"
 
 [params]
-  author = "Steve Francia"
   description = "Lorem ipsum dolor sit amet."
-  headerURL = "https://source.unsplash.com/8weijaL92T8/1920x1200"
-  subtitle = "A simple, bootstrap blog theme."
 
   [params.social]
     rss = true
@@ -49,11 +46,6 @@ author = "authors"
     gitlab = "http://localhost:1313"
     mastodon = "http://localhost:1313"
     keybase = "http://localhost:1313"
-
-  [params.about]
-    enable = true
-    avatarURL = "https://source.unsplash.com/UWj9zaDnYiE/240x240"
-    description = "Lorem ipsum dolor sit amet."
 
   [params.prismJS]
     enable = true
