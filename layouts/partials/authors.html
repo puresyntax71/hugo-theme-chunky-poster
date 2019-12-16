@@ -12,12 +12,12 @@
                             {{- end -}}
                         {{- end -}}
                         <div class="media-body">
-                            <h5 class="name my-0 font-weight-bold">
+                            <h5 class="name my-0">
                                 {{- .Scratch.Set "name" .Title -}}
                                 {{- if $term.Params.name -}}
                                     {{- .Scratch.Set "name" $term.Params.name -}}
                                 {{- end -}}
-                                <a href="{{ $term.RelPermalink }}"><small>{{ .Scratch.Get "name" }}</small></a>
+                                <a href="{{ $term.RelPermalink }}" class="small font-weight-bold">{{ .Scratch.Get "name" }}</a>
                             </h5>
                             {{- with $term.Params.twitter -}}
                                 <p class="social small text-muted">
