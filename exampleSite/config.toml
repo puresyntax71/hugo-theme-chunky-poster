@@ -7,7 +7,6 @@ DefaultContentLanguage = "en"
 enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
 googleAnalytics = ""
-enableMissingTranslationPlaceholders = true
 
 [menu]
   [[menu.main]]

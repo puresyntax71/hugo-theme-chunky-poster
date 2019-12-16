@@ -9,6 +9,7 @@ The structure and design is based on the [Prisma blog](https://www.prisma.io/blo
 * Multi-author
 * Image processing
 * Basic i18n
+* Prism
 
 # Usage
 
@@ -20,7 +21,7 @@ Check out the configuration at [`exampleSite/config.toml`](exampleSite/config.to
 
 ## Authors
 
-The author structure is based on this [blog post](https://www.netlify.com/blog/2018/07/24/hugo-tips-how-to-create-author-pages/).
+The authors structure is based on this [blog post](https://www.netlify.com/blog/2018/07/24/hugo-tips-how-to-create-author-pages/).
 
 1. Add the taxonomy ["author"](exampleSite/config.toml#L28).
 2. `hugo new authors/john-doe/_index.md`
@@ -33,6 +34,28 @@ The author structure is based on this [blog post](https://www.netlify.com/blog/2
     authors: ["John Doe"]
     ...
     ```
+
+## Content images
+
+The images structure is based on this [blog post](https://forestry.io/blog/how-to-use-hugo-s-image-processing-with-forestry/).
+
+Upload the images that will be used on content pages under `content/images` and create the file `content/images/index.md` with the front matter:
+
+```yaml
+---
+headless: true
+---
+```
+
+Set the path to the image in a `post` content under the `images` property:
+
+```yaml
+...
+images: ["/images/image.png"]
+...
+```
+
+The first image on the list will be used as the "cover" image on a post.
 
 # Customization
 
