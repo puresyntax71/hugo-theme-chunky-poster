@@ -2,11 +2,11 @@
 
 A bootstrap 4 based theme. The structure and design is based on the [Prisma blog](https://www.prisma.io/blog/).
 
+[Demo](https://hugo-theme-chunky-poster.netlify.com)
+
 # Screenshot
 
 ![Chunky poster](images/screenshot-responsive.png "Chunky poster")
-
-# Demo
 
 [Link](https://hugo-theme-chunky-poster.netlify.com)
 
