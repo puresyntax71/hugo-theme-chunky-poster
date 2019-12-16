@@ -1,7 +1,15 @@
+before_script:
+    - cd ./exampleSite
+
+stages:
+    - build
+    - deploy
+
 build:
     image: registry.gitlab.com/pages/hugo/hugo_extended:latest
+    stage: build
     script:
-        - hugo
+        - hugo --themesDir ../../ -t "hugo-theme-chunky-poster"
     artifacts:
         paths:
             - public/
