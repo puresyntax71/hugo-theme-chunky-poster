@@ -1,5 +1,5 @@
 before_script:
-    - cd ./exampleSite
+    - cd exampleSite
 
 stages:
     - build
@@ -12,7 +12,7 @@ build:
         - hugo --themesDir ../../ -t "hugo-theme-chunky-poster"
     artifacts:
         paths:
-            - public/
+            - exampleSite/public
     only:
         - master
 
