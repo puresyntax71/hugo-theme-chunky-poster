@@ -2,7 +2,7 @@
 <main class="homepage container py-6">
     <!-- Hero -->
     <div class="hero row">
-        <div class="col position-relative py-md-7{{ if not .Site.Params.homepageImage }} py-7{{ end }}">
+        <div class="col position-relative py-md-7{{ if not .Site.Params.homepageImage }} py-7{{ else }} pb-5{{ end }}">
             {{- with .Site.Params.homepageImage -}}
                 <div class="homepage-image">
                     <img src="{{ . | relURL }}" class="img-fluid">

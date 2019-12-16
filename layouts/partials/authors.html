@@ -7,7 +7,7 @@
                     <div class="media author">
                         {{- if $term.Params.images -}}
                             {{- with .Resources.GetMatch (index $term.Params.images 0) -}}
-                                {{- $image := .Resize "64x64" -}}
+                                {{- $image := .Resize "64x" -}}
                                 <img src="{{ $image.RelPermalink }}" class="mr-3 rounded-circle" alt="{{ $term.Params.name }}">
                             {{- end -}}
                         {{- end -}}
@@ -19,7 +19,11 @@
                                 {{- end -}}
                                 <a href="{{ $term.RelPermalink }}"><small>{{ .Scratch.Get "name" }}</small></a>
                             </h5>
-                            <p class="social small text-muted"><a href="https://twitter.com/@{{ $term.Params.twitter | urlize }}">@{{ $term.Params.twitter }}</a></p>
+                            {{- with $term.Params.twitter -}}
+                                <p class="social small text-muted">
+                                    <a href="https://twitter.com/@{{ . | urlize }}">@{{ . }}</a>
+                                </p>
+                            {{- end -}}
                         </div>
                     </div>
                 </li>

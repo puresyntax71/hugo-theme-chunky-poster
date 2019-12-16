@@ -8,7 +8,7 @@
                         {{- $term := . -}}
                         {{- if $term.Params.images -}}
                             {{- with .Resources.GetMatch (index $term.Params.images 0) -}}
-                                {{- $image := .Resize "300x300" -}}
+                                {{- $image := .Resize "300x" -}}
                                 <p class="text-center my-5">
                                     <img src="{{ $image.RelPermalink }}" class="img-thumbnail rounded-circle" alt="{{ $term.Params.name }}">
                                 </p>
@@ -21,7 +21,11 @@
                         {{- end -}}
                         <h2 class="mb-3">{{ .Scratch.Get "name" }}</h2>
 
-                        <p class="text-muted"><a href="https://twitter.com/@{{ $term.Params.twitter | urlize }}">@{{ $term.Params.twitter }}</a></p>
+                        {{- with $term.Params.twitter -}}
+                            <p class="text-muted">
+                                <a href="https://twitter.com/@{{ . | urlize }}">@{{ .}}</a>
+                            </p>
+                        {{- end -}}
 
                         <div class="content">
                             {{ $term.Content }}

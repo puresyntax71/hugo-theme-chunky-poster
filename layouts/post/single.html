@@ -22,7 +22,7 @@
                     {{- $images := . -}}
                     {{- with $page.Site.GetPage "section" "images" -}}
                         {{- with .Resources.GetMatch (strings.TrimPrefix "/images/" (index $images 0)) -}}
-                            {{- $image := .Resize "900x" -}}
+                            {{- $image := .Fill "900x500" -}}
                             <div class="row justify-content-center mb-3">
                                 <div class="col-md-10">
                                     <img src="{{ $image.RelPermalink }}" class="img-fluid rounded" alt="{{ $page.Title }}">
