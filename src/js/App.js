@@ -3,12 +3,11 @@
 import $ from 'jquery';
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
 import {
-    faFolder,
-    faUser,
-    faCalendar,
+    faBookOpen,
     faChevronLeft,
     faChevronRight,
     faCircle,
+    faClock,
     faEnvelope,
     faRss,
     faTag,
@@ -30,12 +29,11 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 library.add(
-    faFolder,
-    faUser,
-    faCalendar,
+    faBookOpen,
     faChevronLeft,
     faChevronRight,
     faCircle,
+    faClock,
     faEnvelope,
     faFacebook,
     faGithub,

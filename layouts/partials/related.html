@@ -1,0 +1,23 @@
+{{- $related := .Site.RegularPages.Related . | first 3 -}}
+{{- with $related -}}
+    <div class="related-content row mt-5">
+        <div class="col">
+            <div class="card-deck">
+            {{- range . -}}
+                <div class="card">
+                    <a href="{{ .RelPermalink  }}" class="d-block">
+                        <img src="https://via.placeholder.com/400x200.png" class="card-img-top" alt="{{ .Title }}">
+                        <div class="card-body">
+                            <h4 class="card-title">{{ .Title }}</h4>
+                            <p class="card-text text-muted text-uppercase font-weight-bold">{{ .Date.Format "January 2, 2006" }}</p>
+                            <div class="card-text">
+                                {{ .Summary }}
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            {{- end -}}
+            </div>
+        </div>
+    </div>
+{{- end -}}

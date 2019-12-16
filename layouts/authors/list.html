@@ -1,0 +1,43 @@
+{{ define "main" }}
+<main class="content-page container pt-7 pb-5">
+    <div class="row">
+        <div class="col">
+            <article>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        {{- $term := . -}}
+                        {{- if $term.Params.photo -}}
+                            {{- with .Resources.GetMatch $term.Params.photo -}}
+                                {{- $image := .Resize "300x300" -}}
+                                <p class="text-center my-5">
+                                    <img src="{{ $image.RelPermalink }}" class="img-thumbnail rounded-circle" alt="{{ $term.Params.name }}">
+                                </p>
+                            {{- end -}}
+                        {{- end -}}
+
+                        <h2>{{ $term.Params.name }}</h2>
+
+                        <p class="text-muted">{{ $term.Params.twitter }}</p>
+
+                        <div class="content">
+                            {{ $term.Content }}
+                        </div>
+
+                        <div class="articles">
+                            <h3>{{ T "articles" }}</h3>
+
+                            {{- with .Data.Pages -}}
+                            <ul>
+                                {{- range . -}}
+                                    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                                {{- end -}}
+                            </ul>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</main>
+{{ end }}

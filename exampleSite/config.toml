@@ -25,6 +25,7 @@ enableMissingTranslationPlaceholders = true
 category = "categories"
 tag = "tags"
 series = "series"
+author = "authors"
 
 [params]
   author = "Steve Francia"

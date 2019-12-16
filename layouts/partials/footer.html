@@ -1,48 +1,50 @@
-<footer class="footer text-center py-5 container">
-    <div class="row">
-        <div class="col">
-            <ul class="list-inline">
-                {{ if .Site.Params.social.rss -}}
-                <li class="list-inline-item">
-                    <a href="{{- with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{- end }}" rel="alternate" type="application/rss+xml" class="d-block">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-                {{- end -}}
-                {{- if .Site.Params.social.email -}}
-                <li class="list-inline-item">
-                    <a href="mailto://{{ .Site.Params.social.email }}" class="d-block">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-                {{- end -}}
-                {{- range $name, $path := .Site.Params.social -}}
-                    {{- if and $path (not (in (slice "rss" "email") $name)) -}}
+<footer class="footer text-center bg-dark py-6">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <ul class="list-inline">
+                    {{ if .Site.Params.social.rss -}}
                     <li class="list-inline-item">
-                        <a href="{{ $path | safeURL }}" class="d-block">
+                        <a href="{{- with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{- end }}" rel="alternate" type="application/rss+xml" class="d-block">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-{{ $name }} fa-stack-1x fa-inverse"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
                     {{- end -}}
-                {{- end }}
-            </ul>
+                    {{- if .Site.Params.social.email -}}
+                    <li class="list-inline-item">
+                        <a href="mailto://{{ .Site.Params.social.email }}" class="d-block">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    {{- end -}}
+                    {{- range $name, $path := .Site.Params.social -}}
+                        {{- if and $path (not (in (slice "rss" "email") $name)) -}}
+                        <li class="list-inline-item">
+                            <a href="{{ $path | safeURL }}" class="d-block">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-{{ $name }} fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        {{- end -}}
+                    {{- end }}
+                </ul>
 
-            <p class="text-muted">
-                {{ if .Site.Copyright }}
-                    {{ .Site.Copyright | safeHTML }}
-                {{ else }}
-                    Copyright &copy; {{ .Site.Title }} {{ now.Year }}
-                {{ end }}
-            </p>
+                <p class="text-muted">
+                    {{ if .Site.Copyright }}
+                        {{ .Site.Copyright | safeHTML }}
+                    {{ else }}
+                        Copyright &copy; {{ .Site.Title }} {{ now.Year }}
+                    {{ end }}
+                </p>
+            </div>
         </div>
     </div>
 </footer>

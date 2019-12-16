@@ -1,17 +1,12 @@
 # Single
-posted:
-    other: "Posted on <time>{{ .Count }}</time>"
+wordCount:
+    one: "{{ .Count }} word"
+    other: "{{ .Count }} words"
 
-# Sidebar
-tags:
-    other: "Tags"
+readingTime:
+    one: "{{ .Count }} min read"
+    other: "{{ .Count }} mins read"
 
-about:
-    other: "About me"
-
-# Pagination
-previousPage:
-    other: "Previous"
-
-nextPage:
-    other: "Next"
+# Author
+articles:
+    other: "Articles"

@@ -1,0 +1,17 @@
+{{- range .Params.authors -}}
+    {{- with $.Site.GetPage (printf "/authors/%s" (. | urlize)) -}}
+        {{- $term := . -}}
+        <div class="author media my-3">
+            {{- with .Resources.GetMatch $term.Params.photo -}}
+                {{- $image := .Resize "64x64" -}}
+                <img src="{{ $image.RelPermalink }}" class="mr-3 rounded-circle" alt="{{ $term.Params.name }}">
+            {{- end -}}
+            <div class="media-body">
+                <h5 class="mt-0 font-weight-bold">
+                    <a href="{{ $term.RelPermalink }}"><small>{{ $term.Params.name }}</small></a>
+                </h5>
+                <p class="small text-muted">{{ $term.Params.twitter }}</p>
+            </div>
+        </div>
+    {{- end -}}
+{{- end -}}

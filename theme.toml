@@ -12,7 +12,7 @@ min_version = "0.41"
 
 [author]
   name = "virtualcursor"
-  homepage = "https://strict-panda.com""
+  homepage = "https://strict-panda.com"
 
 # If porting an existing theme
 [original]
