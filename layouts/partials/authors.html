@@ -17,7 +17,7 @@
                                 {{- if $term.Params.name -}}
                                     {{- .Scratch.Set "name" $term.Params.name -}}
                                 {{- end -}}
-                                <a href="{{ $term.RelPermalink }}" class="small font-weight-bold">{{ .Scratch.Get "name" }}</a>
+                                <a href="{{ $term.RelPermalink }}" class="small">{{ .Scratch.Get "name" }}</a>
                             </h5>
                             {{- with $term.Params.twitter -}}
                                 <p class="social small text-muted">
