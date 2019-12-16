@@ -21,7 +21,7 @@
                         {{- end -}}
                         <h2 class="mb-3">{{ .Scratch.Get "name" }}</h2>
 
-                        <p class="text-muted">{{ $term.Params.twitter }}</p>
+                        <p class="text-muted"><a href="https://twitter.com/@{{ $term.Params.twitter | urlize }}">@{{ $term.Params.twitter }}</a></p>
 
                         <div class="content">
                             {{ $term.Content }}

@@ -1,7 +1,7 @@
 ---
-name: Hugo Authors
-images: ["hugo-authors.png"]
-twitter: 'hugo_authors'
+name: John Doe
+images: ["john-doe.jpg"]
+twitter: 'john_doe'
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam odio justo, interdum eu ex sit amet, rhoncus interdum magna. Nullam at magna tempor, suscipit ipsum ac, egestas tellus. Maecenas non orci ut velit consectetur feugiat. Proin dignissim ullamcorper eros, at commodo orci eleifend at. Donec luctus diam et interdum finibus. Nullam vel elit hendrerit, aliquet massa eget, vestibulum arcu. Etiam fermentum, sem in interdum scelerisque, massa risus rhoncus turpis, quis efficitur nibh dolor vel dolor. Integer aliquet semper urna, nec malesuada libero mollis dictum. Donec sit amet dui vulputate, porta orci eget, ullamcorper mi. Aliquam erat volutpat. Vivamus sodales lobortis molestie. Donec in elementum tortor. Nullam quis ante risus. Pellentesque ac nisl et tellus suscipit auctor.

@@ -1,23 +1,29 @@
-{{- range .Params.authors -}}
-    {{- with $.Site.GetPage (printf "/authors/%s" (. | urlize)) -}}
-        {{- $term := . -}}
-        <div class="author media my-3">
-            {{- if $term.Params.images -}}
-                {{- with .Resources.GetMatch (index $term.Params.images 0) -}}
-                    {{- $image := .Resize "64x64" -}}
-                    <img src="{{ $image.RelPermalink }}" class="mr-3 rounded-circle" alt="{{ $term.Params.name }}">
-                {{- end -}}
+{{- if .Params.authors -}}
+    <ul class="authors list-inline">
+        {{- range .Params.authors -}}
+            {{- with $.Site.GetPage (printf "/authors/%s" (. | urlize)) -}}
+                {{- $term := . -}}
+                <li class="list-inline-item mr-3">
+                    <div class="media author">
+                        {{- if $term.Params.images -}}
+                            {{- with .Resources.GetMatch (index $term.Params.images 0) -}}
+                                {{- $image := .Resize "64x64" -}}
+                                <img src="{{ $image.RelPermalink }}" class="mr-3 rounded-circle" alt="{{ $term.Params.name }}">
+                            {{- end -}}
+                        {{- end -}}
+                        <div class="media-body">
+                            <h5 class="name my-0 font-weight-bold">
+                                {{- .Scratch.Set "name" .Title -}}
+                                {{- if $term.Params.name -}}
+                                    {{- .Scratch.Set "name" $term.Params.name -}}
+                                {{- end -}}
+                                <a href="{{ $term.RelPermalink }}"><small>{{ .Scratch.Get "name" }}</small></a>
+                            </h5>
+                            <p class="social small text-muted"><a href="https://twitter.com/@{{ $term.Params.twitter | urlize }}">@{{ $term.Params.twitter }}</a></p>
+                        </div>
+                    </div>
+                </li>
             {{- end -}}
-            <div class="media-body">
-                <h5 class="name my-0 font-weight-bold">
-                    {{- .Scratch.Set "name" .Title -}}
-                    {{- if $term.Params.name -}}
-                        {{- .Scratch.Set "name" $term.Params.name -}}
-                    {{- end -}}
-                    <a href="{{ $term.RelPermalink }}"><small>{{ .Scratch.Get "name" }}</small></a>
-                </h5>
-                <p class="small text-muted">{{ $term.Params.twitter }}</p>
-            </div>
-        </div>
-    {{- end -}}
+        {{- end -}}
+    </ul>
 {{- end -}}
