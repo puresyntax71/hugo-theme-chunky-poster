@@ -1,18 +1,18 @@
 {
   "vendors~app~bootstrap": {
-    "js": "/dist/vendors~app~bootstrap.70782457541f6304e776.min.js"
+    "js": "/dist/vendors~app~bootstrap.312fc46c1450fbeccc7c.min.js"
   },
   "app": {
-    "js": "/dist/app.1514be011dbf630ffa1d.min.js"
+    "js": "/dist/app.275a7e106970897ee45e.min.js"
   },
   "main": {
-    "css": "/dist/main.2be140b88dbe53639182.min.css",
-    "js": "/dist/main.fa349bc9d3d30b4a3f2c.min.js"
+    "css": "/dist/main.8a9c47e09406368c6bda.min.css",
+    "js": "/dist/main.3011b5fea1a530dc85ca.min.js"
   },
   "vendors~app": {
-    "js": "/dist/vendors~app.07ddec562ff7d19c7559.min.js"
+    "js": "/dist/vendors~app.0178364e9f95cd6dea8a.min.js"
   },
   "vendors~bootstrap": {
-    "js": "/dist/vendors~bootstrap.1ab558fb031c55129c31.min.js"
+    "js": "/dist/vendors~bootstrap.2e1430d8a1957c808358.min.js"
   }
 }

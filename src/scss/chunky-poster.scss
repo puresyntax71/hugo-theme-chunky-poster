@@ -1,3 +1,12 @@
+.homepage-image {
+    @include media-breakpoint-up(md) {
+        position: absolute;
+        width: 400px;
+        right: 100px;
+        top: 0;
+    }
+}
+
 .author .name a {
     color: $gray-900;
     text-decoration: none;

@@ -29,6 +29,7 @@ author = "authors"
 
 [params]
   description = "Lorem ipsum dolor sit amet."
+  homepageImage = "/images/homepage-image.jpg"
 
   [params.social]
     rss = true
