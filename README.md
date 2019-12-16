@@ -12,7 +12,11 @@ The structure and design is based on the [Prisma blog](https://www.prisma.io/blo
 
 # Installation
 
-`git clone https://gitlab.com/virtualcursor/chunky-poster.git` and copy the configuration under `exampleSite/config.toml`.
+```shell
+git clone https://gitlab.com/virtualcursor/chunky-poster.git
+```
+
+Check out the configuration at [`exampleSite/config.toml`](exampleSite/config.toml) for configuring your Hugo site.
 
 # Customization
 
