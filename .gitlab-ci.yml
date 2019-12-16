@@ -1,0 +1,21 @@
+build:
+    image: registry.gitlab.com/pages/hugo/hugo_extended:latest
+    script:
+        - hugo
+    artifacts:
+        paths:
+            - public/
+    only:
+        - master
+
+deploy:
+    image: node:latest
+    stage: deploy
+    before_script:
+        - npm i -g netlify-cli
+    script:
+        - netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --prod --message "Deploy via Gitlab Pipelines."
+    only:
+        - master
+    dependencies:
+        - build
