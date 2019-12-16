@@ -57,6 +57,24 @@ images: ["/images/image.png"]
 
 The first image on the list will be used as the "cover" image on a post.
 
+## Prism
+
+Configure [Prism](https://prismjs.com/) under `[params.prismJS]`. Set `enable` to `true` and **disable `codeFences`**. Change the theme under `theme`.
+
+```yaml
+...
+[params]
+  ...
+  [params.prismJS]
+    enable = true
+    theme = "okaidia"
+...
+[markup]
+  [markup.highlight]
+    codeFences = false
+...
+```
+
 # Customization
 
 Fork the project and run `yarn watch` during development.
