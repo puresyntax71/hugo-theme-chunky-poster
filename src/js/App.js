@@ -62,5 +62,6 @@ export default {
         $('table').wrap('<div class="table-responsive" />');
         $('table thead').addClass('thead-dark');
         $('pre').wrap('<figure class="highlight" />');
+        $('figure > img').addClass('img-fluid');
     },
 };

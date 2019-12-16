@@ -3,11 +3,11 @@
     "js": "/dist/vendors~app~bootstrap.70782457541f6304e776.min.js"
   },
   "app": {
-    "js": "/dist/app.1514be011dbf630ffa1d.min.js"
+    "js": "/dist/app.3a8a3621f5afceceae4f.min.js"
   },
   "main": {
     "css": "/dist/main.1643c73106fc3ff08c69.min.css",
-    "js": "/dist/main.fa349bc9d3d30b4a3f2c.min.js"
+    "js": "/dist/main.3cc5f62238d8c04489fc.min.js"
   },
   "vendors~app": {
     "js": "/dist/vendors~app.07ddec562ff7d19c7559.min.js"
