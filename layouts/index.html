@@ -1,7 +1,44 @@
 {{ define "main" }}
-<main class="homepage container pt-7 pb-5">
-    <div class="row row-cols-3">
-        {{ range where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+<main class="homepage container py-5">
+    <!-- Hero -->
+    <div class="row py-7 pt-md-7">
+        <div class="col">
+            <h1 class="display-4">{{ .Site.Title }}</h1>
+            {{- with .Site.Params.description -}}
+                <h3 class="font-weight-normal">{{ . | safeHTML }}</h3>
+            {{- end -}}
+        </div>
+    </div>
+
+    <!-- Latest article -->
+    {{- range first 1 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) -}}
+        {{ $page := . }}
+        <div class="row py-md-5">
+            <div class="col-md-6 mb-3">
+                {{- with $page.Params.images -}}
+                    {{- $images := . -}}
+                    {{- with $page.Site.GetPage "section" "images" -}}
+                        {{- with .Resources.GetMatch (strings.TrimPrefix "/images/" (index $images 0)) -}}
+                            {{- $image := .Resize "600x" -}}
+                            <img src="{{ $image.RelPermalink }}" class="img-fluid rounded" alt="{{ $page.Title }}">
+                        {{- end -}}
+                    {{- end -}}
+                {{- end -}}
+            </div>
+            <div class="col-md-6 mb-3">
+                <h5 class="created text-muted text-uppercase font-weight-bold">{{ $page.Date.Format "January 2, 2006" }}</h5>
+                <h2>{{ $page.Title }}</h2>
+
+                <div class="content">
+                    {{ $page.Summary }}
+                </div>
+            </div>
+        </div>
+    {{- end -}}
+
+    <!-- Articles -->
+    <div class="row row-cols-1 row-cols-md-3">
+        {{ range after 1 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
             <div class="col mb-3">
                 {{ .Render "card" }}
             </div>
