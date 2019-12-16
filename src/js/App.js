@@ -56,4 +56,11 @@ export default {
     loadFontAwesome: () => {
         dom.watch();
     },
+    bootstrapify: () => {
+        $('blockquote').addClass('blockquote');
+        $('table').addClass('table');
+        $('table').wrap('<div class="table-responsive" />');
+        $('table thead').addClass('thead-dark');
+        $('pre').wrap('<figure class="highlight" />');
+    },
 };
