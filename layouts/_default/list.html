@@ -10,10 +10,6 @@
             {{ range .Paginator.Pages }}
                 {{ .Render "summary" }}
             {{ end }}
-            {{ partial "pagination.html" . }}
-        </div>
-        <div class="col-md-4">
-            {{ partial "sidebar.html" . }}
         </div>
     </div>
 </main>
