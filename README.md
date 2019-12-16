@@ -1,8 +1,10 @@
-# Chunky Poster
+# Chunky poster
 
-A bootstrap 4 based theme.
+A bootstrap 4 based theme. The structure and design is based on the [Prisma blog](https://www.prisma.io/blog/).
 
-The structure and design is based on the [Prisma blog](https://www.prisma.io/blog/).
+# Screenshot
+
+![Chunky poster](images/screenshot-responsive.png "Chunky-poster")
 
 # Features
 
