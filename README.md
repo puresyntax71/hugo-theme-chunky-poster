@@ -4,7 +4,7 @@ A bootstrap 4 based theme. The structure and design is based on the [Prisma blog
 
 # Screenshot
 
-![Chunky poster](images/screenshot-responsive.png "Chunky-poster")
+![Chunky poster](images/screenshot-responsive.png "Chunky poster")
 
 # Features
 
