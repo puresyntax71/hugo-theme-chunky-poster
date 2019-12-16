@@ -1,6 +1,6 @@
 ---
 name: Hugo Authors
-photo: hugo-authors.png
+images: ["hugo-authors.png"]
 twitter: '@hugo_authors'
 ---
 

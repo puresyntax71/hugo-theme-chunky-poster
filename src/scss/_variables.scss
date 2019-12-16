@@ -1,12 +1,36 @@
 $enable-responsive-font-sizes: true;
 
+$white: #fff;
+$gray-100: #e9edf0;
+$gray-200: #adbcc4;
+$gray-300: #adbcc4;
+$gray-400: #8fa6b2;
+$gray-500: #5d7c8c;
+$gray-600: #3d6478;
+$gray-700: #264d61;
+$gray-800: #0c344b;
+$gray-900: #082333;
+
+$text-muted: $gray-400;
+$body-color: $gray-800;
+$light: $white;
+$dark: $gray-900;
+$headings-color: $gray-900;
+$headings-font-family: 'Open Sans', sans-serif;
+$headings-font-weight: 700;
+
 $font-family-sans-serif: 'Roboto', sans-serif;
 $font-family-monospace: 'Roboto Mono', monospace;
 $font-family-serif: 'Roboto Slab', serif;
 
+$link-color: $gray-800;
+$link-decoration: underline;
+
 $font-size-base: 1.125rem;
 
-$spacer: 1rem;
+$headings-margin-bottom: 1.25rem;
+$paragraph-margin-bottom: 1.5rem;
+$spacer: 1.125rem;
 $spacers: (
   0: 0,
   1: ($spacer * .25),
@@ -19,3 +43,7 @@ $spacers: (
   8: ($spacer * 7),
   9: ($spacer * 8),
 );
+
+$border-radius: .45rem;
+$border-radius-lg: .5rem;
+$border-radius-sm: .4rem;

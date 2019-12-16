@@ -1,0 +1,21 @@
+<div class="card">
+    {{ $page := . }}
+    <a href="{{ $page.RelPermalink  }}" class="d-block">
+        {{- with $page.Params.images -}}
+            {{- $images := . -}}
+            {{- with $page.Site.GetPage "section" "images" -}}
+                {{- with .Resources.GetMatch (strings.TrimPrefix "/images/" (index $images 0)) -}}
+                    {{- $image := .Resize "400x200" -}}
+                    <img src="{{ $image.RelPermalink }}" class="card-img-top" alt="{{ $page.Title }}">
+                {{- end -}}
+            {{- end -}}
+        {{- end -}}
+        <div class="card-body">
+            <h4 class="card-title">{{ $page.Title }}</h4>
+            <p class="card-text text-muted text-uppercase font-weight-bold">{{ $page.Date.Format "January 2, 2006" }}</p>
+            <div class="card-text">
+                {{ $page.Summary }}
+            </div>
+        </div>
+    </a>
+</div>

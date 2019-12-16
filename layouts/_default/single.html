@@ -1,37 +1,44 @@
 {{ define "main" }}
 <main class="content-page container pt-7 pb-5">
+    {{ $page := . }}
     <div class="row">
         <div class="col">
             <article>
                 <div class="row justify-content-center">
                     <div class="col-md-8">
-                        <p class="created text-muted text-uppercase font-weight-bold">{{ .Date.Format "January 2, 2006" }}</p>
+                        <p class="created text-muted text-uppercase font-weight-bold">{{ $page.Date.Format "January 2, 2006" }}</p>
                         <div class="meta text-muted mb-3">
-                            <span class="mr-2"><i class="fas fa-book-open mr-2"></i>{{ T "wordCount" .WordCount }}</span>
-                            <span><i class="fas fa-clock mr-2"></i>{{ T "readingTime" .ReadingTime }}</span>
+                            <span class="mr-2"><i class="fas fa-book-open mr-2"></i>{{ T "wordCount" $page.WordCount }}</span>
+                            <span><i class="fas fa-clock mr-2"></i>{{ T "readingTime" $page.ReadingTime }}</span>
                         </div>
 
-                        <h1>{{ .Title }}</h1>
+                        <h1>{{ $page.Title }}</h1>
 
-                        {{ partial "authors.html" . }}
+                        {{ partial "authors.html" $page }}
                     </div>
                 </div>
 
-                {{- /* if .Params.cover */ -}}
-                <div class="row justify-content-center mb-3">
-                    <div class="col-md-10">
-                        <img src="https://via.placeholder.com/900x500.png" class="img-fluid rounded" alt="{{ .Title }}">
-                    </div>
-                </div>
-                {{- /* end */ -}}
+                {{- with $page.Params.images -}}
+                    {{- $images := . -}}
+                    {{- with $page.Site.GetPage "section" "images" -}}
+                        {{- with .Resources.GetMatch (strings.TrimPrefix "/images/" (index $images 0)) -}}
+                            {{- $image := .Resize "900x" -}}
+                            <div class="row justify-content-center mb-3">
+                                <div class="col-md-10">
+                                    <img src="{{ $image.RelPermalink }}" class="img-fluid rounded" alt="{{ $page.Title }}">
+                                </div>
+                            </div>
+                        {{- end -}}
+                    {{- end -}}
+                {{- end -}}
 
                 <div class="row justify-content-center">
                     <div class="col-md-8">
                         <div class="content">
-                            {{ .Content }}
+                            {{ $page.Content }}
                         </div>
 
-                        {{- with .Params.tags -}}
+                        {{- with $page.Params.tags -}}
                             <p class="tags">
                             {{- range . -}}
                                 <a class="badge badge-pill badge-light border mr-2" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">
@@ -46,6 +53,6 @@
         </div>
     </div>
 
-    {{ partial "related.html" . }}
+    {{ partial "related.html" $page }}
 </main>
 {{ end }}

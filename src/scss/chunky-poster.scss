@@ -1,3 +1,14 @@
+.author .name a {
+    color: $gray-900;
+    text-decoration: none;
+}
+
+blockquote {
+    color: $gray-400;
+    border-left: 6px solid $gray-400;
+    padding-left: $spacer;
+}
+
 .related-content .card-deck .card {
     @include media-breakpoint-up(md) {
         flex: 33% 0 0;
@@ -6,4 +17,8 @@
 
 code[class*=language-], pre[class*=language-] {
     font-family: $font-family-monospace;
+}
+
+.navbar a, .card > a, a.badge {
+    text-decoration: none;
 }
