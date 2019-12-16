@@ -1,6 +1,3 @@
-before_script:
-    - cd exampleSite
-
 stages:
     - build
     - deploy
@@ -8,6 +5,8 @@ stages:
 build:
     image: registry.gitlab.com/pages/hugo/hugo_extended:latest
     stage: build
+    before_script:
+        - cd exampleSite
     script:
         - hugo --themesDir ../../ -t "hugo-theme-chunky-poster"
     artifacts:
@@ -20,6 +19,7 @@ deploy:
     image: node:latest
     stage: deploy
     before_script:
+        - cd exampleSite
         - npm i -g netlify-cli
     script:
         - netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --prod --message "Deploy via Gitlab Pipelines."
