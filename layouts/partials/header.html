@@ -1,6 +1,7 @@
+{{ $current := . }}
 <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top shadow-sm" id="navbar-main-menu">
     <div class="container">
-        <a class="navbar-brand" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+        <a class="navbar-brand font-weight-bold" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -8,7 +9,7 @@
             {{ with .Site.Menus.main }}
             <ul class="navbar-nav ml-auto">
                 {{ range . }}
-                    <li class="nav-item"><a class="nav-link" href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+                    <li class="nav-item{{ if $current.IsMenuCurrent "main" . }} active{{ end }}"><a class="nav-link" href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
                 {{ end }}
             </ul>
             {{ end }}
