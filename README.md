@@ -83,7 +83,7 @@ Configure [Prism](https://prismjs.com/) under `[params.prismJS]`. Set `enable` t
 
 ## Commento
 
-Configure [Comment](https://commento.io/) under `[params.commento]`. Set `enable` to `true` and add the URL at `url`:
+Configure [Commento](https://commento.io/) under `[params.commento]`. Set `enable` to `true` and add the URL at `url`:
 
 ```yaml
 ...
