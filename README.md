@@ -1,5 +1,7 @@
 # Chunky poster
 
+![Gitlab pipeline status (branch)](https://img.shields.io/gitlab/pipeline/virtualcursor/hugo-theme-chunky-poster/master)
+
 A simple, bootstrap 4 based blog theme. The structure and design is based on the [Prisma blog](https://www.prisma.io/blog/).
 
 [Demo](https://hugo-theme-chunky-poster.netlify.com)
