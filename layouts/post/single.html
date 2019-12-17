@@ -55,6 +55,15 @@
                         {{ template "_internal/disqus.html" . }}
                     </div>
                 </div>
+
+                {{- if .Site.Params.commento.enable -}}
+                <div class="row justify-content-center my-3">
+                    <div class="col-lg-8">
+                        <div id="commento"></div>
+                        <script src="{{ .Site.Params.commento.url }}"></script>
+                    </div>
+                </div>
+                {{- end -}}
             </article>
         </div>
     </div>

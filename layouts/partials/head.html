@@ -8,7 +8,7 @@
   <meta name="description" content="{{ .Site.Params.description }}">
 {{- end -}}
 
-<meta name="author" content="{{ if .Params.author }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }}">
+<meta name="author" content="{{ if .Params.authors }}{{ delimit .Params.authors ", " }}{{ else }}{{ .Site.Params.author }}{{ end }}">
 
 {{ if .Site.Params.prismJS.enable }}
     {{ if .Site.Params.prismJS.theme }}

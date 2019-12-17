@@ -6,7 +6,8 @@ languageCode = "en"
 DefaultContentLanguage = "en"
 enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
-googleAnalytics = ""
+googleAnalytics = "UA-XXXX"
+DisqusShortname = "hugo-authors"
 
 [menu]
   [[menu.main]]
@@ -27,6 +28,7 @@ series = "series"
 author = "authors"
 
 [params]
+  author = "Hugo Authors"
   description = "Lorem ipsum dolor sit amet."
   homepageImage = "/images/homepage-image.jpg"
 
@@ -50,6 +52,10 @@ author = "authors"
   [params.prismJS]
     enable = true
     theme = ""
+
+  [params.commento]
+    enable = true
+    url = "http://localhost:1313"
 
 [markup]
   [markup.highlight]
