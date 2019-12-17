@@ -15,6 +15,7 @@ A bootstrap 4 based theme. The structure and design is based on the [Prisma blog
 * Basic i18n
 * Prism
 * LazyLoad
+* Commento
 
 # Usage
 
@@ -77,6 +78,20 @@ Configure [Prism](https://prismjs.com/) under `[params.prismJS]`. Set `enable` t
 [markup]
   [markup.highlight]
     codeFences = false
+...
+```
+
+## Commento
+
+Configure [Comment](https://commento.io/) under `[params.commento]`. Set `enable` to `true` and add the URL at `url`:
+
+```yaml
+...
+[params]
+  ...
+  [params.commento]
+    enable = true
+    theme = "https://somename.commento.io"
 ...
 ```
 
