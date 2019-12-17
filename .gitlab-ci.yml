@@ -8,7 +8,7 @@ build:
     before_script:
         - cd exampleSite
     script:
-        - hugo --themesDir ../../ -t "hugo-theme-chunky-poster"
+        - hugo --themesDir ../../ -t "hugo-theme-chunky-poster" --baseURL "https://hugo-theme-chunky-poster.netlify.com"
     artifacts:
         paths:
             - exampleSite/public
