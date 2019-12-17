@@ -68,7 +68,7 @@ export default {
         const { default: LazyLoad } = await import(/* webpackChunkName: "lazyload" */ 'vanilla-lazyload');
         new LazyLoad({
             thresholds: "40px 10%",
-            load_delay: 300,
+            load_delay: 100,
         });
     }
 };
