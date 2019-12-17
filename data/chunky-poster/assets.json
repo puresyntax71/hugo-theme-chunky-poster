@@ -1,21 +1,21 @@
 {
   "vendors~app~bootstrap": {
-    "js": "/dist/vendors~app~bootstrap.70782457541f6304e776.min.js"
+    "js": "/dist/0.23b50058e3a55e47f278.min.js"
   },
   "app": {
-    "js": "/dist/app.34af067140186bcab29a.min.js"
+    "js": "/dist/1.cb178d60db38250e0081.min.js"
   },
   "lazyload": {
-    "js": "/dist/lazyload.807a821b1655ad41f049.min.js"
+    "js": "/dist/2.ad04784cbbc47aeacc40.min.js"
   },
   "main": {
-    "css": "/dist/main.4e9f3b17bbbc5c3f32e6.min.css",
-    "js": "/dist/main.2cb1ada2e6d9b1ad6974.min.js"
+    "css": "/dist/main.c2c25e21815f4c1624d7.min.css",
+    "js": "/dist/main.3d30d46990d820a8ed2d.min.js"
   },
   "vendors~app": {
-    "js": "/dist/vendors~app.34de844dba423ca59e61.min.js"
+    "js": "/dist/4.2c0795f752a1e2b3725a.min.js"
   },
   "vendors~bootstrap": {
-    "js": "/dist/vendors~bootstrap.18740f19c313deba3f65.min.js"
+    "js": "/dist/5.5805974127029081221e.min.js"
   }
 }
