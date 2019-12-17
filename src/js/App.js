@@ -57,12 +57,12 @@ export default {
         dom.watch();
     },
     bootstrapify: () => {
-        $('blockquote').addClass('blockquote');
-        $('table').addClass('table');
-        $('table').wrap('<div class="table-responsive" />');
-        $('table thead').addClass('thead-dark');
-        $('pre').wrap('<figure class="highlight" />');
-        $('figure > img').addClass('img-fluid');
+        $('.content blockquote').addClass('blockquote');
+        $('.content table').addClass('table');
+        $('.content table').wrap('<div class="table-responsive" />');
+        $('.content table thead').addClass('thead-dark');
+        $('.content pre').wrap('<figure class="highlight" />');
+        $('.content figure > img').addClass('img-fluid');
     },
     lazyload: async () => {
         const { default: LazyLoad } = await import(/* webpackChunkName: "lazyload" */ 'vanilla-lazyload');

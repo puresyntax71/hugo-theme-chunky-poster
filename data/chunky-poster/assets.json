@@ -3,14 +3,14 @@
     "js": "/dist/0.23b50058e3a55e47f278.min.js"
   },
   "app": {
-    "js": "/dist/1.cb178d60db38250e0081.min.js"
+    "js": "/dist/1.f696c54e1450dedb299e.min.js"
   },
   "lazyload": {
     "js": "/dist/2.ad04784cbbc47aeacc40.min.js"
   },
   "main": {
     "css": "/dist/main.c2c25e21815f4c1624d7.min.css",
-    "js": "/dist/main.3d30d46990d820a8ed2d.min.js"
+    "js": "/dist/main.4c6eb92ae851ee0b6749.min.js"
   },
   "vendors~app": {
     "js": "/dist/4.2c0795f752a1e2b3725a.min.js"
