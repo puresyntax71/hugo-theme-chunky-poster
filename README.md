@@ -1,6 +1,6 @@
 # Chunky poster
 
-A bootstrap 4 based theme. The structure and design is based on the [Prisma blog](https://www.prisma.io/blog/).
+A simple, bootstrap 4 based blog theme. The structure and design is based on the [Prisma blog](https://www.prisma.io/blog/).
 
 [Demo](https://hugo-theme-chunky-poster.netlify.com)
 
@@ -108,6 +108,7 @@ For customizing SCSS, the main entrypoint is at `src/scss/style.scss`. Bootstrap
 * [Victor Hugo](https://github.com/netlify-templates/victor-hugo)
 * [hugo-theme-even](https://github.com/olOwOlo/hugo-theme-even)
 * [Blank](https://github.com/vimux/blank/)
+* [CleanWhite](https://github.com/zhaohuabing/hugo-theme-cleanwhite)
 
 Images from [Unsplash](https://unsplash.com/) and [Freepik](https://www.freepik.com/).
 
