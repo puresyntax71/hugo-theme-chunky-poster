@@ -7,7 +7,7 @@ DefaultContentLanguage = "en"
 enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
 googleAnalytics = "UA-XXXX"
-DisqusShortname = "hugo-authors"
+DisqusShortname = ""
 
 [menu]
   [[menu.main]]
