@@ -8,7 +8,6 @@ module.exports = {
     entry: path.resolve(__dirname, 'src/main.js'),
     output: {
         path: path.resolve(__dirname, 'static/dist'),
-        publicPath: '/dist/',
     },
     module: {
         rules: [
@@ -30,6 +29,7 @@ module.exports = {
             filename: 'assets.json',
             path: path.resolve(__dirname, 'data/chunky-poster'),
             prettyPrint: true,
+            fullPath: false,
         }),
     ],
 };

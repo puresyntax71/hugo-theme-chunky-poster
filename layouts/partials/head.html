@@ -22,7 +22,7 @@
 {{ with index .Site.Data "chunky-poster" }}
     {{ range $vendor := .assets }}
         {{ if $vendor.css }}
-        <link rel="stylesheet" href="{{ $vendor.css | relURL }}">
+            <link rel="stylesheet" href="{{ print "dist/" $vendor.css | relURL }}">
         {{ end }}
     {{ end }}
 {{ end }}

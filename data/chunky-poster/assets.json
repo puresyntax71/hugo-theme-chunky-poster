@@ -1,21 +1,6 @@
 {
-  "vendors~app~bootstrap": {
-    "js": "/dist/0.23b50058e3a55e47f278.min.js"
-  },
-  "app": {
-    "js": "/dist/1.f696c54e1450dedb299e.min.js"
-  },
-  "lazyload": {
-    "js": "/dist/2.ad04784cbbc47aeacc40.min.js"
-  },
   "main": {
-    "css": "/dist/main.c2c25e21815f4c1624d7.min.css",
-    "js": "/dist/main.4c6eb92ae851ee0b6749.min.js"
-  },
-  "vendors~app": {
-    "js": "/dist/4.2c0795f752a1e2b3725a.min.js"
-  },
-  "vendors~bootstrap": {
-    "js": "/dist/5.5805974127029081221e.min.js"
+    "css": "main.c2c25e21815f4c1624d7.min.css",
+    "js": "main.9114c3ed2b8ebf0bc010.min.js"
   }
 }

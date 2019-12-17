@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const merge = require('webpack-merge');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -26,6 +27,9 @@ module.exports = merge(common, {
         ]
     },
     plugins: [
+        new webpack.optimize.LimitChunkCountPlugin({
+            maxChunks: 1,
+        }),
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash].min.css',
             sourceMap: true,
