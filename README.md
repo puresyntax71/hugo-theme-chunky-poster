@@ -8,7 +8,7 @@ A simple, bootstrap 4 based blog theme. The structure and design is based on the
 
 # Screenshot
 
-![Chunky poster](images/screenshot-responsive.png "Chunky poster")
+![Chunky poster](https://gitlab.com/virtualcursor/hugo-theme-chunky-poster/raw/master/images/screenshot-responsive.png "Chunky poster")
 
 # Features
 
