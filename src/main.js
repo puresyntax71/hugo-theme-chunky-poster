@@ -7,4 +7,5 @@ window.addEventListener('DOMContentLoaded', async (event) => {
 
     App.loadFontAwesome();
     App.bootstrapify();
+    App.lazyload();
 });

@@ -6,7 +6,7 @@
             {{- with $page.Site.GetPage "section" "images" -}}
                 {{- with .Resources.GetMatch (strings.TrimPrefix "/images/" (index $images 0)) -}}
                     {{- $image := .Fill "700x350" -}}
-                    <img src="{{ $image.RelPermalink }}" class="card-img-top" alt="{{ $page.Title }}">
+                    <img data-src="{{ $image.RelPermalink }}" class="card-img-top" alt="{{ $page.Title }}">
                 {{- end -}}
             {{- end -}}
         {{- end -}}

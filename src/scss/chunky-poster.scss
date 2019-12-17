@@ -42,3 +42,12 @@ figure.highlight {
         margin-right: 0;
     }
 }
+
+img[data-src] {
+    opacity: 0;
+    @include transition($transition-fade);
+
+    &.loaded {
+        opacity: 1;
+    }
+}

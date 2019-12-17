@@ -25,7 +25,7 @@
                             {{- $image := .Fill "900x500" -}}
                             <div class="row justify-content-center mb-3">
                                 <div class="col-lg-10">
-                                    <img src="{{ $image.RelPermalink }}" class="img-fluid rounded" alt="{{ $page.Title }}">
+                                    <img data-src="{{ $image.RelPermalink }}" class="img-fluid rounded" alt="{{ $page.Title }}">
                                 </div>
                             </div>
                         {{- end -}}

@@ -64,4 +64,11 @@ export default {
         $('pre').wrap('<figure class="highlight" />');
         $('figure > img').addClass('img-fluid');
     },
+    lazyload: async () => {
+        const { default: LazyLoad } = await import(/* webpackChunkName: "lazyload" */ 'vanilla-lazyload');
+        new LazyLoad({
+            thresholds: "40px 10%",
+            load_delay: 300,
+        });
+    }
 };

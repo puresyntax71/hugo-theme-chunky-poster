@@ -27,7 +27,7 @@
                         {{- with .Resources.GetMatch (strings.TrimPrefix "/images/" (index $images 0)) -}}
                             {{- $image := .Fill "700x450" -}}
                             <a href="{{ $page.RelPermalink }}" class="d-block">
-                                <img src="{{ $image.RelPermalink }}" class="img-fluid rounded" alt="{{ $page.Title }}">
+                                <img data-src="{{ $image.RelPermalink }}" class="img-fluid rounded" alt="{{ $page.Title }}">
                             </a>
                         {{- end -}}
                     {{- end -}}

@@ -10,7 +10,7 @@
                             {{- with .Resources.GetMatch (index $term.Params.images 0) -}}
                                 {{- $image := .Resize "300x" -}}
                                 <p class="text-center my-5">
-                                    <img src="{{ $image.RelPermalink }}" class="img-thumbnail rounded-circle" alt="{{ $term.Params.name }}">
+                                    <img data-src="{{ $image.RelPermalink }}" class="img-thumbnail rounded-circle" alt="{{ $term.Params.name }}">
                                 </p>
                             {{- end -}}
                         {{- end -}}
