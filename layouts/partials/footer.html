@@ -5,12 +5,16 @@
                 <ul class="list-inline">
                     {{ if .Site.Params.social.rss -}}
                     <li class="list-inline-item">
-                        <a href="{{- with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{- end }}" rel="alternate" type="application/rss+xml" class="d-block">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
+                        {{- with .Site.GetPage "" -}}
+                            {{- with .OutputFormats.Get "RSS" -}}
+                                <a href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" class="d-block">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            {{- end -}}
+                        {{- end -}}
                     </li>
                     {{- end -}}
                     {{- if .Site.Params.social.email -}}
