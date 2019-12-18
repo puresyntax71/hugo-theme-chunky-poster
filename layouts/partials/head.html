@@ -12,10 +12,9 @@
 
 {{ if .Site.Params.prismJS.enable }}
     {{ if .Site.Params.prismJS.theme }}
-    <link rel="stylesheet"
-          href="//cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism-{{ .Site.Params.prismJS.theme }}.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism-{{ .Site.Params.prismJS.theme }}.min.css">
     {{ else }}
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism.min.css">
     {{ end }}
 {{ end }}
 
