@@ -55,7 +55,7 @@ author = "authors"
 
   [params.commento]
     enable = true
-    url = "http://localhost:1313"
+    url = "https://commento.io"
 
 [markup]
   [markup.highlight]
