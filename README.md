@@ -1,6 +1,7 @@
 # Chunky poster
 
 ![Gitlab pipeline status (branch)](https://img.shields.io/gitlab/pipeline/virtualcursor/hugo-theme-chunky-poster/master)
+![CircleCI](https://img.shields.io/circleci/build/github/puresyntax71/hugo-theme-chunky-poster)
 
 A simple, bootstrap 4 based blog theme. The structure and design is based on the [Prisma blog](https://www.prisma.io/blog/).
 
