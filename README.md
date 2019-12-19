@@ -39,9 +39,7 @@ The authors structure is based on this [blog post](https://www.netlify.com/blog/
 
     ```yaml
     ---
-    ...
     authors: ["John Doe"]
-    ...
     ---
     ```
 
@@ -61,9 +59,7 @@ Set the path to the image in a `post` content under the `images` property:
 
 ```yaml
 ---
-...
 images: ["/images/image.png"]
-...
 ---
 ```
 
@@ -74,17 +70,14 @@ The first image on the list will be used as the "cover" image on a post.
 Configure [Prism](https://prismjs.com/) under `[params.prismJS]`. Set `enable` to `true` and **disable `codeFences`**. Change the theme under `theme`.
 
 ```toml
-...
 [params]
-  ...
   [params.prismJS]
     enable = true
     theme = "okaidia"
-...
+
 [markup]
   [markup.highlight]
     codeFences = false
-...
 ```
 
 ## Commento
@@ -92,13 +85,10 @@ Configure [Prism](https://prismjs.com/) under `[params.prismJS]`. Set `enable` t
 Configure [Commento](https://commento.io/) under `[params.commento]`. Set `enable` to `true` and add the URL at `url`:
 
 ```toml
-...
 [params]
-  ...
   [params.commento]
     enable = true
     theme = "https://somename.commento.io"
-...
 ```
 
 ## Share
@@ -106,17 +96,13 @@ Configure [Commento](https://commento.io/) under `[params.commento]`. Set `enabl
 Enable sharing under `params` with `share` set to `true` and disable per-post sharing by setting `share` to `false` in the front matter.
 
 ```toml
-...
 [params]
   share = true
-...
 ```
 
 ```yaml
 ---
-...
 share: false
-...
 ---
 ```
 
