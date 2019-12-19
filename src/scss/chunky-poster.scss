@@ -55,3 +55,10 @@ img[data-src] {
 #navbar-main-menu .nav-item .nav-link {
     font-size: $navbar-brand-font-size;
 }
+
+ul.share.nav {
+    .nav-link {
+        padding: $nav-link-padding-y 0.2rem;
+        text-align: center;
+    }
+}
