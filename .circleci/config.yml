@@ -4,6 +4,16 @@ orbs:
 version: 2.1
 
 jobs:
+  test:
+    executor:
+      name: node/default
+      tag: '13.1.0'
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - run: yarn
+      - run: yarn build
   build:
     docker:
       - image: cibuilds/hugo:latest
@@ -32,6 +42,7 @@ jobs:
 workflows:
   main:
     jobs:
+      - test
       - build
       - deploy:
           filters:
