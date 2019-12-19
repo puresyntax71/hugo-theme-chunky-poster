@@ -76,5 +76,17 @@ export default {
             thresholds: "40px 10%",
             load_delay: 100,
         });
-    }
+    },
+    navbarFade: () => {
+        let $position = $(window).scrollTop();
+
+        $(window).scroll(() => {
+            const $scroll = $(window).scrollTop();
+
+            $scroll > $position ? $('#navbar-main-menu').removeClass('show') :
+                $('#navbar-main-menu').addClass('show');
+
+            $position = $scroll;
+        });
+    },
 };
