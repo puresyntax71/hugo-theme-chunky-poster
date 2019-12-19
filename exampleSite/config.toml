@@ -31,6 +31,7 @@ author = "authors"
   author = "Hugo Authors"
   description = "Lorem ipsum dolor sit amet."
   homepageImage = "/images/homepage-image.jpg"
+  share = true
 
   [params.social]
     rss = true
