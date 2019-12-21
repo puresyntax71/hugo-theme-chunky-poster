@@ -82,9 +82,10 @@ export default {
 
         $(window).scroll(() => {
             const $scroll = $(window).scrollTop();
+            const $navbarHeight = $('#navbar-main-menu.fixed-top').outerHeight();
 
-            $scroll > $position ? $('#navbar-main-menu').addClass('hide') :
-                $('#navbar-main-menu').removeClass('hide');
+            $scroll > $position ? $('#navbar-main-menu.fixed-top').css('top', -$navbarHeight) :
+                $('#navbar-main-menu.fixed-top').css('top', 0);
 
             $position = $scroll;
         });
