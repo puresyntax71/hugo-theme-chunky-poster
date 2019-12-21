@@ -83,8 +83,8 @@ export default {
         $(window).scroll(() => {
             const $scroll = $(window).scrollTop();
 
-            $scroll > $position ? $('#navbar-main-menu').removeClass('show') :
-                $('#navbar-main-menu').addClass('show');
+            $scroll > $position ? $('#navbar-main-menu').addClass('hide') :
+                $('#navbar-main-menu').removeClass('hide');
 
             $position = $scroll;
         });

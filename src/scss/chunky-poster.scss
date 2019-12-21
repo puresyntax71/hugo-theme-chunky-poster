@@ -52,8 +52,17 @@ img[data-src] {
     }
 }
 
-#navbar-main-menu .nav-item .nav-link {
-    font-size: $navbar-brand-font-size;
+#navbar-main-menu {
+    height: 3.4rem;
+    transition: top 0.2s ease;
+
+    &.hide {
+        top: -3.4rem;
+    }
+
+    .nav-item .nav-link {
+        font-size: $navbar-brand-font-size;
+    }
 }
 
 ul.share.nav {
