@@ -18,6 +18,7 @@ A simple, bootstrap 4 based blog theme. The structure and design is based on the
 * Prism
 * LazyLoad
 * Commento
+* Image gallery
 
 # Usage
 
@@ -105,6 +106,10 @@ Enable sharing under `params` with `share` set to `true` and disable per-post sh
 share: false
 ---
 ```
+
+## Image gallery
+
+The image gallery feature uses the [`ekko-lightbox`](https://github.com/ashleydw/lightbox/) and `figure` shortcode. This is just a simple implementation of the lightbox gallery feature from the library.
 
 # Customization
 
