@@ -7,7 +7,7 @@
                     <li class="list-inline-item">
                         {{- with .Site.GetPage "" -}}
                             {{- with .OutputFormats.Get "RSS" -}}
-                                <a href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" class="d-block">
+                                <a href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" class="icons d-block">
                                     <span class="fa-stack fa-lg">
                                         <i class="fa fa-circle fa-stack-2x"></i>
                                         <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
@@ -19,7 +19,7 @@
                     {{- end -}}
                     {{- if .Site.Params.social.email -}}
                     <li class="list-inline-item">
-                        <a href="mailto://{{ .Site.Params.social.email }}" class="d-block">
+                        <a href="mailto://{{ .Site.Params.social.email }}" class="icons d-block">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
@@ -30,7 +30,7 @@
                     {{- range $name, $path := .Site.Params.social -}}
                         {{- if and $path (not (in (slice "rss" "email") $name)) -}}
                         <li class="list-inline-item">
-                            <a href="{{ $path | safeURL }}" class="d-block">
+                            <a href="{{ $path | safeURL }}" class="icons d-block">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fab fa-{{ $name }} fa-stack-1x fa-inverse"></i>
@@ -47,6 +47,10 @@
                     {{ else }}
                         Copyright &copy; {{ .Site.Title }} {{ now.Year }}
                     {{ end }}
+                </p>
+
+                <p class="text-muted">
+                Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> with <a href="https://github.com/puresyntax71/hugo-theme-chunky-poster" target="_blank">Chunky Poster</a>.
                 </p>
             </div>
         </div>

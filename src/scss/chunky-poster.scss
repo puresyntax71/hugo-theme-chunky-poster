@@ -70,3 +70,7 @@ ul.share.nav {
         text-align: center;
     }
 }
+
+footer a:not(.icons) {
+    color: $gray-200;
+}
