@@ -68,4 +68,3 @@ author = "authors"
 
   [services.twitter]
     disableInlineCSS = true
-

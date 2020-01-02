@@ -8,8 +8,13 @@
                         {{- if $term.Params.images -}}
                             {{- with .Resources.GetMatch (index $term.Params.images 0) -}}
                                 {{- $image := .Resize "64x" -}}
+                                {{- $2ximage := .Resize "128x q100" -}}
+                                {{- $3ximage := .Resize "192x q100" -}}
                                 <a href="{{ $term.RelPermalink }}" class="mr-3">
-                                    <img src="{{ $image.RelPermalink }}" class="rounded-circle" alt="{{ $term.Params.name }}">
+                                    <picture>
+                                        <source srcset="{{ $image.RelPermalink }} 1x, {{ $2ximage.RelPermalink }} 2x, {{ $3ximage.RelPermalink }} 3x">
+                                        <img src="{{ $image.RelPermalink }}" class="rounded-circle" alt="{{ $term.Params.name }}">
+                                    </picture>
                                 </a>
                             {{- end -}}
                         {{- end -}}
