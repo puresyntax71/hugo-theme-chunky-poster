@@ -29,6 +29,10 @@ code[class*=language-], pre[class*=language-] {
     @include font-size($code-font-size);
 }
 
+pre[class*=language-] code {
+    padding: 0;
+}
+
 .latest h2 a, .navbar a, .card > a, a.badge {
     text-decoration: none;
 }
