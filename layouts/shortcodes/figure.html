@@ -1,18 +1,16 @@
 <figure class="figure{{ with .Get "class" }} {{ . }}{{ end }}">
-    {{- if .Get "link" -}}
-        <a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
-    {{- end }}
-    <img src="{{ .Get "src" }}"
-         {{- if or (.Get "alt") (.Get "caption") }}
-         alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
-         {{- end -}}
-         {{- with .Get "width" }} width="{{ . }}"{{ end -}}
-         {{- with .Get "height" }} height="{{ . }}"{{ end -}}
-         class="figure-img img-fluid"
-    /> <!-- Closing img tag -->
-    {{- if .Get "link" }}</a>{{ end -}}
+    <a href="{{ .Get "src" }}" class="d-block" data-toggle="lightbox" data-gallery="post-gallery">
+        <img src="{{ .Get "src" }}"
+             {{- if or (.Get "alt") (.Get "caption") }}
+             alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
+             {{- end -}}
+             {{- with .Get "width" }} width="{{ . }}"{{ end -}}
+             {{- with .Get "height" }} height="{{ . }}"{{ end -}}
+             class="figure-img img-fluid"
+        /> <!-- Closing img tag -->
+    </a>
     {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
-        <figcaption class="figure-caption">
+        <figcaption class="figure-caption text-center">
             {{ with (.Get "title") -}}
                 {{ . }}
             {{- end -}}
