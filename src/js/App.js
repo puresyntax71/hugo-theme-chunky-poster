@@ -87,6 +87,10 @@ export default {
             $scroll > $position ? $('#navbar-main-menu.fixed-top').css('top', -$navbarHeight) :
                 $('#navbar-main-menu.fixed-top').css('top', 0);
 
+            if ($scroll <= 0) {
+              $('#navbar-main-menu.fixed-top').css('top', 0);
+            }
+
             $position = $scroll;
         });
     },
