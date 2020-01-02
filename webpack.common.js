@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const path = require('path');
 const AssetsPlugin = require('assets-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -31,5 +32,9 @@ module.exports = {
             prettyPrint: true,
             fullPath: false,
         }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
+        })
     ],
 };
