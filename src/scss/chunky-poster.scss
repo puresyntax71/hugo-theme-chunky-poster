@@ -29,7 +29,7 @@ code[class*=language-], pre[class*=language-] {
     @include font-size($code-font-size);
 }
 
-pre[class*=language-] code {
+pre code {
     padding: 0;
 }
 
