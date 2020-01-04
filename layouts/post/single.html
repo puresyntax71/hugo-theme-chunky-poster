@@ -33,6 +33,13 @@
                 {{- end -}}
 
                 <div class="row justify-content-center">
+                    {{- if .Params.toc -}}
+                    <div class="col-lg-3 pl-0 table-of-contents">
+                        <div class="sticky-top" style="top: 100px;">
+                            {{ .TableOfContents }}
+                        </div>
+                    </div>
+                    {{- end -}}
                     <div class="col-lg-8">
                         <div class="content">
                             {{ $page.Content }}
