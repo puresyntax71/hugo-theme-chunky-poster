@@ -1,0 +1,12 @@
+# Single
+wordCount:
+    one: "{{ .Count }} letter"
+    other: "{{ .Count }} letters"
+
+readingTime:
+    one: "{{ .Count }} min read"
+    other: "{{ .Count }} mins read"
+
+# Author
+articles:
+    other: "Articles"
