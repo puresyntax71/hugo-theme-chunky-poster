@@ -32,6 +32,7 @@ author = "authors"
   description = "Lorem ipsum dolor sit amet."
   homepageImage = "/images/homepage-image.jpg"
   share = true
+  showLanguageSwitcher = false
 
   [params.social]
     rss = true
