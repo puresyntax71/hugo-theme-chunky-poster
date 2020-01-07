@@ -7,7 +7,9 @@
         </button>
         <div class="collapse navbar-collapse" id="main-menu">
             <ul class="navbar-nav ml-auto">
-            {{ partial "i18nlist.html" . }}
+            {{- if .Site.Params.showLanguageSwitcher -}}
+                {{ partial "i18nlist.html" . }}
+            {{- end -}}
             {{ with .Site.Menus.main }}
                 {{ range . }}
                     <li class="nav-item{{ if $current.IsMenuCurrent "main" . }} active{{ end }}"><a class="nav-link" href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
