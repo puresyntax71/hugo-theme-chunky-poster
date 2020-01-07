@@ -6,13 +6,14 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="main-menu">
-            {{ with .Site.Menus.main }}
             <ul class="navbar-nav ml-auto">
+            {{ partial "i18nlist.html" . }}
+            {{ with .Site.Menus.main }}
                 {{ range . }}
                     <li class="nav-item{{ if $current.IsMenuCurrent "main" . }} active{{ end }}"><a class="nav-link" href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
                 {{ end }}
-            </ul>
             {{ end }}
+            </ul>
         </div>
     </div>
 </nav>
