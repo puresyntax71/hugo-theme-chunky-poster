@@ -29,8 +29,16 @@ code[class*=language-], pre[class*=language-] {
     @include font-size($code-font-size);
 }
 
+figure.highlight pre:not([class*=language-]) {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+    background-color: $gray-100;
+}
+
 pre code {
     padding: 0;
+    background-color: transparent;
 }
 
 .latest h2 a, .navbar a, .card > a, a.badge {

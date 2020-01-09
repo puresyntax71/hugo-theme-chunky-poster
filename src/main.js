@@ -10,4 +10,5 @@ window.addEventListener('DOMContentLoaded', async (event) => {
     App.lazyload();
     App.navbarFade();
     App.lightbox();
+    App.syntaxHighlight();
 });

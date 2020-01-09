@@ -68,7 +68,7 @@ The first image on the list will be used as the "cover" image on a post.
 
 ## Prism
 
-Configure [Prism](https://prismjs.com/) under `[params.prismJS]`. Set `enable` to `true` and **disable `codeFences`**. Change the theme under `theme`.
+Configure [Prism](https://prismjs.com/) under `[params.prismJS]` and set `enable` to `true`. Change the theme under `theme`.
 
 ```toml
 [params]
