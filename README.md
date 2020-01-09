@@ -75,10 +75,6 @@ Configure [Prism](https://prismjs.com/) under `[params.prismJS]` and set `enable
   [params.prismJS]
     enable = true
     theme = "okaidia"
-
-[markup]
-  [markup.highlight]
-    codeFences = false
 ```
 
 ## Commento
