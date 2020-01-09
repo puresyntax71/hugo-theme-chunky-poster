@@ -1,6 +1,6 @@
 # Chunky poster
 
-![CircleCI](https://img.shields.io/circleci/build/github/puresyntax71/hugo-theme-chunky-poster)
+![CircleCI](https://circleci.com/gh/puresyntax71/hugo-theme-chunky-poster/tree/master)
 
 A simple, bootstrap 4 based blog theme. The structure and design is based on the [Prisma blog](https://www.prisma.io/blog/).
 
@@ -23,7 +23,7 @@ A simple, bootstrap 4 based blog theme. The structure and design is based on the
 # Usage
 
 ```shell
-git clone https://gitlab.com/virtualcursor/chunky-poster.git
+git clone https://github.com/puresyntax71/hugo-theme-chunky-poster.git
 ```
 
 Check out the configuration at [`exampleSite/config.toml`](exampleSite/config.toml) for configuring your Hugo site.

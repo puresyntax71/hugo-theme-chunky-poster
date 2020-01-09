@@ -3,9 +3,9 @@
 
 name = "Chunky Poster"
 license = "MIT"
-licenselink = "https://gitlab.com/virtualcursor/hugo-theme-chunky-poster/blob/master/LICENSE"
+licenselink = "https://github.com/puresyntax71/hugo-theme-chunky-poster/blob/master/LICENSE"
 description = "A simple, bootstrap 4 based blog theme."
-homepage = "https://gitlab.com/virtualcursor/chunky-poster"
+homepage = "https://github.com/puresyntax71/hugo-theme-chunky-poster"
 tags = ["minimal", "minimalist", "blog", "responsive", "syntax highlighting", "multilingual", "minimalist", "light"]
 features = ["minimal", "minimalist", "blog", "responsive", "syntax highlighting", "multilingual", "minimalist", "light"]
 min_version = "0.41"
