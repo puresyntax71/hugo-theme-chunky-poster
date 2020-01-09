@@ -1,10 +1,10 @@
 # Chunky poster
 
-![CircleCI](https://circleci.com/gh/puresyntax71/hugo-theme-chunky-poster/tree/master)
+[![CircleCI](https://img.shields.io/circleci/build/github/puresyntax71/hugo-theme-chunky-poster)](https://circleci.com/gh/puresyntax71/hugo-theme-chunky-poster/tree/master)
 
 A simple, bootstrap 4 based blog theme. The structure and design is based on the [Prisma blog](https://www.prisma.io/blog/).
 
-[Demo](https://hugo-theme-chunky-poster.netlify.com)
+[Demo](https://hugo-theme-chunky-poster.netlify.com) | [Demo 2](https://themes.gohugo.io/theme/hugo-theme-chunky-poster)
 
 # Screenshot
 
