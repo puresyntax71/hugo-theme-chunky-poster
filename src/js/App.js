@@ -100,5 +100,13 @@ export default {
             e.preventDefault();
             $(this).ekkoLightbox();
         });
+    },
+    syntaxHighlight: () => {
+        $('pre:has(> code[class*=language-])').removeAttr('style');
+
+        const element = $('pre:has(> code:not([class*=language-]))');
+
+        element.addClass('language-none');
+        $('> code', element).addClass('language-none');
     }
 };
