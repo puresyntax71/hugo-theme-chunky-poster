@@ -6168,10 +6168,10 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
-vanilla-lazyload@^12.4.0:
-  version "12.4.0"
-  resolved "https://registry.yarnpkg.com/vanilla-lazyload/-/vanilla-lazyload-12.4.0.tgz#7c4d5c08bab3244565f254eb236cd6b78578c5e6"
-  integrity sha512-MqDh5WvG6qR2ReVFNlICXjrYeEq5VozSxwxOrc17TY4/BRB1pAlcioim18OOrcOg7rElYEgwa5mFL92K8/MEzg==
+vanilla-lazyload@^12.5.0:
+  version "12.5.0"
+  resolved "https://registry.yarnpkg.com/vanilla-lazyload/-/vanilla-lazyload-12.5.0.tgz#eb6702a9ea3bbc9ad80e0640c4405a9605459ab1"
+  integrity sha512-sqDpMj6WSa/xWOcaZ5T5RHMe8gW07B+aB4XOEU+BBGZZHdWp6nM3CLO2u19SKEDopcIdHcZlWps1/LzlwtYolQ==
 
 vendors@^1.0.0:
   version "1.0.3"
