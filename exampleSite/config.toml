@@ -35,6 +35,10 @@ author = "authors"
   share = true
   showLanguageSwitcher = false
 
+  # Custom CSS and JS. Relative to /static/css and /static/js respectively.
+  customCSS = []
+  customJS = []
+
   [params.social]
     rss = true
     email = "example@example.com"
