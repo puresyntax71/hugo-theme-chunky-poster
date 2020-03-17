@@ -85,7 +85,7 @@ Configure [Commento](https://commento.io/) under `[params.commento]`. Set `enabl
 [params]
   [params.commento]
     enable = true
-    theme = "https://somename.commento.io"
+    url = "https://somename.commento.io"
 ```
 
 ## Share
