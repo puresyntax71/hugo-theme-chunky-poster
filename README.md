@@ -111,9 +111,13 @@ The image gallery feature uses the [`ekko-lightbox`](https://github.com/ashleydw
 
 Fork the project and run `yarn watch` during development.
 
+> The project has an `.nvmrc` if you wish to use [`nvm`](https://github.com/nvm-sh/nvm).
+
 The application javascript file is located at `src/js/app.js`.
 
 For customizing SCSS, the main entrypoint is at `src/scss/style.scss`. Bootstrap variables can be overridden in the `_variables.scss` file. The theme's styles are located at `src/scss/chunky-poster.scss`.
+
+For production, you can run `yarn build` for the assets to be updated.
 
 # Credits
 
