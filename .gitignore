@@ -11,5 +11,8 @@ node_modules/
 *.sass.map
 *.scss.map
 
+# JetBrains stuff
+.idea
+
 # Local Netlify folder
 .netlify
