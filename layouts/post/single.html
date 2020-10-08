@@ -7,7 +7,7 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
                         <div class="meta text-muted mb-3">
-                            <p class="created text-muted text-uppercase font-weight-bold mb-1">{{ $page.Date.Format "January 2, 2006" }}</p>
+                            <p class="created text-muted text-uppercase font-weight-bold mb-1">{{ $page.Date.Format (.Site.Params.dateFormat | default "January 2, 2006") }}</p>
                             <span class="mr-2"><i class="fas fa-book-open mr-2"></i>{{ T "wordCount" $page.WordCount }}</span>
                             <span><i class="fas fa-clock mr-2"></i>{{ T "readingTime" $page.ReadingTime }}</span>
                         </div>

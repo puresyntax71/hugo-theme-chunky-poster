@@ -32,6 +32,7 @@ author = "authors"
   author = "Hugo Authors"
   description = "Lorem ipsum dolor sit amet."
   homepageImage = "/images/homepage-image.jpg"
+  dateFormat = "January 2, 2006"
   share = true
   showLanguageSwitcher = false
 

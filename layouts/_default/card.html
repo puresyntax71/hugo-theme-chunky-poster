@@ -12,7 +12,7 @@
         {{- end -}}
         <div class="card-body">
             <h4 class="card-title">{{ $page.Title }}</h4>
-            <p class="card-text text-muted text-uppercase">{{ $page.Date.Format "January 2, 2006" }}</p>
+            <p class="card-text text-muted text-uppercase">{{ $page.Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}</p>
             <div class="card-text">
                 {{ $page.Summary | plainify }}
             </div>

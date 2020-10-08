@@ -34,7 +34,7 @@
                 {{- end -}}
             </div>
             <div class="col-lg-6 mb-3">
-                <h5 class="created text-muted text-uppercase font-weight-bold">{{ $page.Date.Format "January 2, 2006" }}</h5>
+                <h5 class="created text-muted text-uppercase font-weight-bold">{{ $page.Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}</h5>
                 <h2><a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a></h2>
 
                 <div class="content">
