@@ -12,7 +12,8 @@
             {{- end -}}
             {{ with .Site.Menus.main }}
                 {{ range . }}
-                    <li class="nav-item{{ if $current.IsMenuCurrent "main" . }} active{{ end }}"><a class="nav-link" href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
+                    {{ $active := or (eq $current.RelPermalink .URL) (or ($current.HasMenuCurrent "main" .) ($current.IsMenuCurrent "main" .)) }}
+                    <li class="nav-item{{ if $active }} active{{ end }}"><a class="nav-link" href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
                 {{ end }}
             {{ end }}
             </ul>
