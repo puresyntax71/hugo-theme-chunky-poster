@@ -5,7 +5,7 @@
             {{- $images := . -}}
             {{- with $page.Site.GetPage "section" "images" -}}
                 {{- with .Resources.GetMatch (strings.TrimPrefix "/images/" (index $images 0)) -}}
-                    {{- $image := .Resize "700x350" -}}
+                    {{- $image := .Fill "700x350" -}}
                     <img data-src="{{ $image.RelPermalink }}" class="card-img-top mx-auto d-block" alt="{{ $page.Title }}">
                 {{- end -}}
             {{- end -}}
@@ -14,7 +14,7 @@
             <h4 class="card-title">{{ $page.Title }}</h4>
             <p class="card-text text-muted text-uppercase">{{ $page.Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}</p>
             <div class="card-text">
-                {{ $page.Summary | plainify }}
+                {{ $page.Summary | htmlUnescape }}
             </div>
         </div>
     </a>
