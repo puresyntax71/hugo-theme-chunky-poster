@@ -1,0 +1,24 @@
+{{ with index .Site.Data "chunky-poster" }}
+    {{ range $vendor := .assets }}
+        {{ if $vendor.js }}
+            <script src="{{ print "dist/" $vendor.js | relURL }}"></script>
+        {{ end }}
+    {{ end }}
+{{ end }}
+
+{{ if .Site.Params.prismJS.enable }}
+<script>
+    window.Prism = window.Prism || {};
+    window.Prism.manual = true;
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/autoloader/prism-autoloader.min.js"></script>
+{{ end }}
+
+{{ range .Site.Params.customJS -}}
+    <script src="{{ "js/" | relURL }}{{ . }}"></script>
+{{ end }}
+
+{{ if or .Params.math .Site.Params.math }}
+    {{ partial "math.html" . }}
+{{ end }}
