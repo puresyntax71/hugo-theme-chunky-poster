@@ -1,0 +1,35 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: monthly
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: "@babel/preset-env"
+    versions:
+    - 7.12.11
+  - dependency-name: "@babel/core"
+    versions:
+    - 7.12.10
+  - dependency-name: "@babel/plugin-transform-runtime"
+    versions:
+    - 7.12.10
+  - dependency-name: "@babel/runtime"
+    versions:
+    - 7.12.5
+  - dependency-name: vanilla-lazyload
+    versions:
+    - 17.3.0
+  - dependency-name: css-loader
+    versions:
+    - 5.0.1
+  - dependency-name: webpack
+    versions:
+    - 4.44.2
+  - dependency-name: bootstrap
+    versions:
+    - 4.5.3
+  - dependency-name: elliptic
+    versions:
+    - 6.5.3
