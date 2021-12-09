@@ -1,24 +1,32 @@
 {{- if and .Site.Params.share (ne .Params.share false) -}}
     <ul class="share nav my-3 justify-content-end">
+        {{- if .Site.Params.social.twitter -}}
         <li class="nav-item">
             <a class="nav-link" target="_blank" href="https://twitter.com/intent/tweet?url={{ .Permalink | htmlEscape }}&text={{ .Title | htmlEscape }}">
               <i class="fa-fw fab fa-twitter"></i>
           </a>
         </li>
+        {{- end -}}
+        {{- if .Site.Params.social.linkedin -}}
         <li class="nav-item">
             <a class="nav-link" target="_blank" href="https://www.linkedin.com/shareArticle?url={{ .Permalink | htmlEscape }}&title={{ .Title | htmlEscape }}">
                 <i class="fa-fw fab fa-linkedin-in"></i>
             </a>
         </li>
+        {{- end -}}
+        {{- if .Site.Params.social.facebook -}}
         <li class="nav-item">
             <a class="nav-link" target="_blank" href="https://www.facebook.com/sharer.php?u={{ .Permalink | htmlEscape }}&t={{ .Title | htmlEscape }}">
                 <i class="fa-fw fab fa-facebook-f"></i>
             </a>
         </li>
+        {{- end -}}
+        {{- if .Site.Params.social.reddit -}}
         <li class="nav-item">
             <a class="nav-link" target="_blank" href="https://reddit.com/submit?url={{ .Permalink | htmlEscape }}&title={{ .Title | htmlEscape }}">
                 <i class="fa-fw fab fa-reddit-alien"></i>
             </a>
         </li>
+        {{- end -}}
     </nav>
 {{- end -}}
