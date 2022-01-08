@@ -18,19 +18,7 @@
                     </div>
                 </div>
 
-                {{- with $page.Params.images -}}
-                    {{- $images := . -}}
-                    {{- with $page.Site.GetPage "section" "images" -}}
-                        {{- with .Resources.GetMatch (strings.TrimPrefix "/images/" (index $images 0)) -}}
-                            {{- $image := .Fit "900x500" -}}
-                            <div class="row justify-content-center mb-3">
-                                <div class="col-lg-10">
-                                    <img data-src="{{ $image.RelPermalink }}" class="img-fluid rounded mx-auto d-block" alt="{{ $page.Title }}">
-                                </div>
-                            </div>
-                        {{- end -}}
-                    {{- end -}}
-                {{- end -}}
+                {{ partial "page-header.html" . }}
 
                 <div class="row justify-content-center">
                     <div class="col-lg-8">

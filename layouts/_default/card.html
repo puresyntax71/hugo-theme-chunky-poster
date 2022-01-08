@@ -1,15 +1,7 @@
 <div class="card h-100">
     {{ $page := . }}
     <a href="{{ $page.RelPermalink }}" class="d-block">
-        {{- with $page.Params.images -}}
-            {{- $images := . -}}
-            {{- with $page.Site.GetPage "section" "images" -}}
-                {{- with .Resources.GetMatch (strings.TrimPrefix "/images/" (index $images 0)) -}}
-                    {{- $image := .Fill "700x350" -}}
-                    <img data-src="{{ $image.RelPermalink }}" class="card-img-top mx-auto d-block" alt="{{ $page.Title }}">
-                {{- end -}}
-            {{- end -}}
-        {{- end -}}
+        {{ partial "card-header.html" . }}
         <div class="card-body">
             <h4 class="card-title">{{ $page.Title }}</h4>
             <p class="card-text text-muted text-uppercase">{{ $page.Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}</p>
