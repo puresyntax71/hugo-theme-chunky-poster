@@ -7,4 +7,5 @@ images: []
 categories: []
 tags: []
 authors: []
+cover: true
 ---
