@@ -41,6 +41,7 @@
                     </div>
                 </div>
 
+                {{- if not $page.Params.disableComments -}}
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
                         {{ template "_internal/disqus.html" . }}
@@ -54,6 +55,7 @@
                         <script src="{{ .Site.Params.commento.url }}"></script>
                     </div>
                 </div>
+                {{- end -}}
                 {{- end -}}
             </article>
         </div>
