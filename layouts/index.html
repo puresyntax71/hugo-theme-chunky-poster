@@ -21,17 +21,7 @@
         {{ $page := . }}
         <div class="latest row py-lg-5">
             <div class="col-lg-6 mb-3">
-                {{- with $page.Params.images -}}
-                    {{- $images := . -}}
-                    {{- with $page.Site.GetPage "section" "images" -}}
-                        {{- with .Resources.GetMatch (strings.TrimPrefix "/images/" (index $images 0)) -}}
-                            {{- $image := .Fill "700x450" -}}
-                            <a href="{{ $page.RelPermalink }}" class="d-block">
-                                <img data-src="{{ $image.RelPermalink }}" class="img-fluid rounded" alt="{{ $page.Title }}">
-                            </a>
-                        {{- end -}}
-                    {{- end -}}
-                {{- end -}}
+                {{ partial "latest-feature-image.html" . }}
             </div>
             <div class="col-lg-6 mb-3">
                 <h5 class="created text-muted text-uppercase font-weight-bold">{{ $page.Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}</h5>
