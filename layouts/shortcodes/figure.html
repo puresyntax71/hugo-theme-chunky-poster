@@ -1,5 +1,5 @@
 <figure class="figure{{ with .Get "class" }} {{ . }}{{ end }}">
-    <a href="{{ .Get "src" }}" class="d-block" data-toggle="lightbox" data-gallery="post-gallery">
+    <a href="{{ .Get "src" }}" class="d-block" data-toggle="lightbox" data-gallery="post-gallery" data-title="{{ .Page.Title }}" data-footer="{{ .Get "title" | markdownify | html }}">
         <img src="{{ .Get "src" }}"
              {{- if or (.Get "alt") (.Get "caption") }}
              alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
@@ -12,7 +12,7 @@
     {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
         <figcaption class="figure-caption text-center">
             {{ with (.Get "title") -}}
-                {{ . }}
+                {{ . | markdownify}}
             {{- end -}}
             {{- if or (.Get "caption") (.Get "attr") -}}<p>
                 {{- .Get "caption" | markdownify -}}

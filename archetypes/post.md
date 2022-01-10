@@ -1,11 +1,11 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 slug: "{{ .Name | slugify }}"
-draft: true
 date: {{ .Date }}
-images: []
+draft: true
 categories: []
 tags: []
 authors: []
-cover: true
+cover: ""
+coverInSingle: true
 ---

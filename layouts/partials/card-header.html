@@ -1,6 +1,6 @@
-{{ $featured_image := partial "func/GetFeaturedImage.html" . }}
-{{ if $featured_image }}
+{{ $card_image := partial "func/GetCardImage.html" . }}
+{{ if $card_image }}
   {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
-  {{ $featured_image := (trim $featured_image "/") | absURL }}
-  <img data-src="{{ $featured_image }}" class="card-img-top mx-auto d-block" alt="{{ .Title }}">
+  {{ $card_image := (trim $card_image "/") | absURL }}
+  <img data-src="{{ $card_image }}" class="card-img-top mx-auto d-block" alt="{{ .Title }}">
 {{ end }}
