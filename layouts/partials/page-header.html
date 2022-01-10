@@ -1,7 +1,5 @@
 {{ $featured_image := partial "func/GetFeaturedImage.html" . }}
 {{ if $featured_image }}
-  {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
-  {{ $featured_image := (trim $featured_image "/") | absURL }}
   <div class="row justify-content-center mb-3">
     <div class="col-lg-10">
       <img data-src="{{ $featured_image }}" class="img-fluid rounded mx-auto d-block" alt="{{ .Title }}">

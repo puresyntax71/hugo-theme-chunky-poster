@@ -1,7 +1,5 @@
 {{ $card_image := partial "func/GetLatestFeatureImage.html" . }}
 {{ if $card_image }}
-  {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
-  {{ $card_image := (trim $card_image "/") | absURL }}
   <a href="{{ .RelPermalink }}" class="d-block">
     <img data-src="{{ $card_image }}" class="img-fluid rounded" alt="{{ .Title }}">
   </a>
