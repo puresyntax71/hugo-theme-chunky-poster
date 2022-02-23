@@ -1,6 +1,6 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
-slug: "{{ .Name | slugify }}"
+slug: "{{ .Name | urlize }}"
 date: {{ .Date }}
 draft: true
 categories: []
