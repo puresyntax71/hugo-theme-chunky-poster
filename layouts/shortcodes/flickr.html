@@ -1,0 +1,9 @@
+{{ if .IsNamedParams }}
+<a data-flickr-embed="true" href="{{ .Get `album` }}" title="{{ if .Get `title` }}{{ .Get `title` }}{{ else }}{{ $.Page.Params.title }}{{ end }}"{{ with .Get `header` }} data-header="{{.}}"{{ end }}{{ with .Get `footer` }} data-footer="{{.}}"{{ end }}{{ with .Get `slideshow` }} data-content="{{.}}"{{ end }}>
+    <img src="{{ .Get `src` }}" width="100%" alt="{{ if .Get `title` }}{{ .Get `title` }}{{ else }}{{ $.Page.Params.title }}{{ end }}">
+</a>
+{{ else }}
+<a data-flickr-embed="true" href="{{ .Get 0 }}" title="{{ if len .Params | ge 3 }}{{ .Get 2 }}{{ else }}{{ $.Page.Params.title }}{{ end }}"{{ if len .Params | ge 4 }} data-header="{{ .Get 3 }}"{{ end }}{{ if len .Params | ge 5 }} data-footer="{{ .Get 4 }}"{{ end }}{{ if len .Params | ge 6 }} data-content="{{ .Get 5 }}"{{ end }}>
+    <img src="{{ .Get 1 }}" width="100%" alt="{{ if len .Params | ge 3 }}{{ .Get 2 }}{{ else }}{{ $.Page.Params.title }}{{ end }}">
+</a>
+{{ end }}

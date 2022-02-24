@@ -9,7 +9,12 @@
     {{ block "main" . }}{{ end }}
 
     {{ partial "footer.html" . }}
+    
     {{ partial "foot.html" . }}
+
+    {{ if .HasShortcode "flickr" }}
+    <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+    {{ end }}
 
     {{ template "_internal/google_analytics.html" . }}
 </body>
