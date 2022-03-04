@@ -17,11 +17,14 @@
 <meta name="author" content="{{ if .Params.authors }}{{ delimit .Params.authors ", " }}{{ else }}{{ .Site.Params.author }}{{ end }}">
 
 <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}" sizes="180x180">
-<link rel="icon" href="{{ "favicon-32x32.png" | relURL }} " sizes="32x32" type="image/png">
+<link rel="shortcut icon" href="{{ "favicon-32x32.png" | relURL }} " sizes="32x32" type="image/png">
 <link rel="icon" href="{{ "favicon-16x16.png" | relURL }}" sizes="16x16" type="image/png">
+<link rel="icon" href="{{ "favicon-96x96.png" | relURL }}" sizes="96x96" type="image/png">
 <link rel="manifest" href="{{ "manifest.json" | relURL }}">
 <link rel="mask-icon" href="{{ "safari-pinned-tab.svg" | relURL }}" color="#0c344b">
 <link rel="icon" href="{{ "favicon.ico" | relURL }}">
+<meta name="msapplication-square310x310logo" content="mstile-310x310.png">
+<meta name="msapplication-TileColor" content="#FFFFFF">
 
 {{ if .Site.Params.prismJS.enable }}
     {{ if .Site.Params.prismJS.theme }}
