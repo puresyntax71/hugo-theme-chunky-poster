@@ -6,6 +6,10 @@
 <body>
     {{ partial "header.html" . }}
 
+    {{ if .HasShortcode "chart" }}
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    {{ end }}
+
     {{ block "main" . }}{{ end }}
 
     {{ partial "footer.html" . }}
